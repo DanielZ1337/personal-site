@@ -18,4 +18,4 @@ npm run dev
 
 ## License
 
-[ISC](https://opensource.org/licenses/ISC)
+[MIT](https://choosealicense.com/licenses/mit/)
