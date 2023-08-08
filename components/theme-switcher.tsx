@@ -25,13 +25,13 @@ export default function ThemeSwitcher() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" data-theme={theme} className={"group"}>
-                <DropdownMenuItem className={"group-data-[theme=light]:bg-muted-foreground/50"} onClick={() => setTheme("light")}>
+                <DropdownMenuItem className={"group-data-[theme=light]:bg-primary/10"} onClick={() => setTheme("light")}>
                     Light
                 </DropdownMenuItem>
-                <DropdownMenuItem className={"group-data-[theme=dark]:bg-muted-foreground/50"}  onClick={() => setTheme("dark")}>
+                <DropdownMenuItem className={"group-data-[theme=dark]:bg-primary/10"}  onClick={() => setTheme("dark")}>
                     Dark
                 </DropdownMenuItem>
-                <DropdownMenuItem className={"group-data-[theme=system]:bg-muted-foreground/50"} onClick={() => setTheme("system")}>
+                <DropdownMenuItem className={"group-data-[theme=system]:bg-primary/10"} onClick={() => setTheme("system")}>
                     System
                 </DropdownMenuItem>
             </DropdownMenuContent>

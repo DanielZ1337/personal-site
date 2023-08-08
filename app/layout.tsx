@@ -19,7 +19,44 @@ export const metadata: Metadata = {
         template: `%s | ${siteConfig.title}`,
         default: siteConfig.title,
     },
-    
+    icons: [
+        {
+            rel: 'icon',
+            type: 'image/x-icon',
+            url: new URL('/favicon.ico', siteConfig.url).toString(),
+        },
+        {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '32x32',
+            url: new URL('/favicon-32x32.png', siteConfig.url).toString(),
+        },
+        {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '16x16',
+            url: new URL('/favicon-16x16.png', siteConfig.url).toString(),
+        },
+        {
+            rel: 'icon',
+            type: 'image/svg+xml',
+            url: new URL('/favicon.svg', siteConfig.url).toString(),
+        },
+        {
+            rel: 'apple-touch-icon',
+            sizes: '180x180',
+            url: new URL('/apple-touch-icon.png', siteConfig.url).toString(),
+        },
+        {
+            rel: 'manifest',
+            url: new URL('/manifest.json', siteConfig.url).toString(),
+        },
+        {
+            rel: 'mask-icon',
+            url: new URL('/safari-pinned-tab.svg', siteConfig.url).toString(),
+            color: '#000000',
+        },
+    ],
     description: 'Personal website of @danielz1337',
     openGraph: {
         type: 'website',
@@ -40,6 +77,9 @@ export const metadata: Metadata = {
         site: siteConfig.links.twitter,
         images: {
             url: new URL('/og.png', siteConfig.url).toString(),
+            width: 1200,
+            height: 630,
+            alt: siteConfig.title,
         },
         creator: siteConfig.links.twitter,
         card: "summary_large_image"
@@ -49,8 +89,17 @@ export const metadata: Metadata = {
         {
             name: siteConfig.creator,
             url: siteConfig.links.twitter,
+        },
+        {
+            name: siteConfig.creator,
+            url: siteConfig.links.github,
         }
     ],
+    other: {
+        'theme-color': '#000000',
+        'msapplication-TileColor': '#000000',
+        'msapplication-config': new URL('/browserconfig.xml', siteConfig.url).toString(),
+    }
 }
 
 export default function RootLayout({
@@ -60,7 +109,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <body className={cn('min-h-[100dvh] font-sans antialiased', inter.className)}>
+        <body className={cn('min-h-[100dvh] font-sans antialiased leading-6', inter.className)}>
         <Providers>
             <div className="relative flex min-h-[100dvh] flex-col">
                 <Header/>

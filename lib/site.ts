@@ -6,7 +6,10 @@ export const siteConfig = {
     description: 'Personal website of @danielz1337',
     links: {
         twitter: "https://twitter.com/danielz1337",
-        github: "https://github.com/DanielZ1337/portfolio-site",
+        github: "https://github.com/DanielZ1337/",
+        linkedin: "https://www.linkedin.com/in/daniel-bermann-schmidt/",
+        email: "mailto:danielz2nd@hotmail.com",
+        github_repo: "https://github.com/DanielZ1337/portfolio-site",
     },
 }
 
