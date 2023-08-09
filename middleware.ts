@@ -8,7 +8,7 @@ function getLocale(request: NextRequest) {
     const headers = {'accept-language': request.headers.get('accept-language')!}
     const languages = new Negotiator({headers}).languages()
     const defaultLocale = siteConfig.defaultLang
-    const availableLanguages = siteConfig.langs.map((lang) => lang.code)
+    const availableLanguages = siteConfig.langs
     return match(languages, availableLanguages, defaultLocale) // -> 'en-US'
 }
 
@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
     // Check if there is any supported locale in the pathname
     const pathname = request.nextUrl.pathname
     const pathnameIsMissingLocale = siteConfig.langs.every(
-        (locale) => !pathname.startsWith(`/${locale.code}/`) && pathname !== `/${locale.code}`
+        (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
 
     // Redirect if there is no locale
@@ -42,6 +42,6 @@ export const config = {
         // Optional: only run on root (/) URL
         // '/'
 
-        '/((?!api|_next|.*\\..*).*)'
+        "/((?!api|static|.*\\..*|_next).*)",
     ],
 }

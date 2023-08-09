@@ -3,35 +3,23 @@ import Image from "next/image";
 import logo from "@/public/favicon.svg";
 import ThemeSwitcher from "@/components/theme-switcher";
 import {ReactNode} from "react";
-import Chip from "@/components/chip";
-import {siteConfig} from "@/lib/site";
-import {BsArrowRight, BsGithub} from "react-icons/bs";
 import LanguageSelector from "@/components/language-selector";
+import {getDictionary} from "@/dictionaries/utils/dictionaries";
 
-const headerLinks = [
-    {
-        href: "/#projects",
-        text: "Projects"
-    },
-    {
-        href: "/#about",
-        text: "About"
-    },
-    {
-        href: "/#contact",
-        text: "Contact"
-    },
-    {
-        href: "/#blog",
-        text: "Blog"
-    },
-    {
-        href: "/#resume",
-        text: "Resume"
+export default async function Header({lang}: { lang: string }) {
+    const dict = await getDictionary(lang)
+
+    const headerLinks = Object.keys(dict.navbar.links[0]).map(key => ({
+        href: dict.navbar.links[0][key as keyof typeof dict.navbar.links[0]].anchor,
+        text: dict.navbar.links[0][key as keyof typeof dict.navbar.links[0]].title
+    }));
+
+    if (typeof window === "undefined") {
+        console.log("window is undefined")
+    } else {
+        console.log("window is defined")
     }
-]
 
-export default function Header() {
     return (
         <header className={"backdrop-blur-2xl fixed w-full shadow-md border-b items-center justify-center flex"}>
             <div className="flex items-center justify-between p-4 h-16 w-full" style={{

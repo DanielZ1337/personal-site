@@ -6,9 +6,43 @@
     }
   },
   "navbar": {
+    "links": [{
+      "home": {
+        "anchor": "#hjem",
+        "title": "Hjem"
+      },
+      "about": {
+        "anchor": "#om",
+        "title": "Om"
+      },
+      "contact": {
+        "anchor": "#kontakt",
+        "title": "Kontakt"
+      },
+      "resume": {
+        "anchor": "#cv",
+        "title": "CV"
+      }
+    }],
     "home": "Hjem",
     "about": "Om",
     "contact": "Kontakt",
-    "language": "Sprog"
+    "language": "Sprog",
+    "theme": "Tema",
+    "light": "Lyst",
+    "dark": "Mørkt",
+    "system": "System",
+    "toggleTheme": "Skift tema"
+  },
+  "languages": {
+    "da": "Dansk",
+    "en": "Engelsk"
+  },
+  "footer": {
+    "creator": "Lavet med ❤\uFE0F af Daniel Bermann Schmidt",
+    "source": "Kildekode på"
+  },
+  "text": {
+    "visit": "Besøg"
   }
 }

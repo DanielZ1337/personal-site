@@ -112,16 +112,16 @@ export default function RootLayout({
     return (
         <html lang={lang} suppressHydrationWarning>
         <body className={cn('min-h-[100dvh] font-sans antialiased leading-6', inter.className)}>
-        <Suspense>
-            <Providers>
+        <Providers>
+            <Suspense>
                 <div className="relative flex min-h-[100dvh] flex-col">
-                    <Header/>
+                    <Header lang={lang}/>
                     <div className="flex-1 flex-col flex mt-16">{children}</div>
-                    <Footer/>
+                    <Footer lang={lang}/>
                 </div>
                 <Toaster/>
-            </Providers>
-        </Suspense>
+            </Suspense>
+        </Providers>
         </body>
         </html>
     )

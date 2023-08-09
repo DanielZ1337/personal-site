@@ -1,21 +1,24 @@
 import {BsArrowRight, BsGithub} from "react-icons/bs";
 import Chip from "@/components/chip";
 import {siteConfig} from "@/lib/site";
+import {getDictionary} from "@/dictionaries/utils/dictionaries";
 
-export default function Footer() {
+export default async function Footer({lang}:{ lang: string }) {
+    const dict = await getDictionary(lang)
+
     return (
         <div className={"w-full flex justify-center h-32 items-center space-x-4 whitespace-nowrap"}>
-            <p>Made with ❤️ by Daniel Bermann Schmidt</p>
+            <p>{dict.footer.creator}</p>
             <Chip
                 prompt={
                     <>
-                        Visit
+                        {dict.text.visit}
                         <BsArrowRight/>
                     </>
                 }
                 link={siteConfig.links.github_repo}
             >
-                Source on <BsGithub/> Github
+                {dict.footer.source} <BsGithub/> Github
             </Chip>
         </div>
     )
