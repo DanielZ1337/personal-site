@@ -1,1 +1,1 @@
-export type Dictionary = typeof import('@/dictionaries/en.json')
+export type Dictionary = typeof import('@/dictionaries/en').default

@@ -11,6 +11,13 @@ import {Toaster} from "@/components/ui/toaster";
 
 const inter = Inter({subsets: ['latin']})
 
+export function getStaticPaths() {
+    return {
+        paths: siteConfig.langs.map((lang) => ({params: {lang}})),
+        fallback: false,
+    }
+}
+
 if (process.env.NODE_ENV === 'development') {
     siteConfig.url = 'http://localhost:3000'
 }

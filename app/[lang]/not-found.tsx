@@ -24,20 +24,20 @@ export default function NotFound() {
     useEffect(() => {
         if (dict) {
             toast({
-                title: dict.errors.NotFound.title,
-                description: dict.errors.NotFound.detail,
+                title: dict.errors.NotFound.toast.title,
+                description: dict.errors.NotFound.toast.detail,
             })
             setTimeout(() => {
                 router.push('/')
             }, 5000)
         }
-    }, [dict, dict?.errors.NotFound.detail, dict?.errors.NotFound.title, router, toast]);
+    }, [dict, router, toast]);
 
     return (
         <div className="h-full w-full flex-1 flex flex-col justify-center items-center">
             <h1 className="text-9xl font-extrabold text-foreground tracking-widest">404</h1>
             <div className="bg-primary px-2 text-sm rounded rotate-12 absolute">
-                Page Not Found
+                {dict?.errors.NotFound.page.title}
             </div>
             <button className="mt-5 group">
                 <a
@@ -48,7 +48,7 @@ export default function NotFound() {
                     />
 
                     <span className="relative block px-8 py-3 bg-foreground dark:bg-black/90 border border-primary">
-                        <Link href={'/'} className={"group-active:shadow-2xl group-active:shadow-primary"}>You&apos;ll be redirected to homepage, or you can click here</Link>
+                        <Link href={`/${lang}`} className={"group-active:shadow-2xl group-active:shadow-primary"}>{dict?.errors.NotFound.page.message}</Link>
                     </span>
                 </a>
             </button>

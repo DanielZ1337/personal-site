@@ -1,0 +1,35 @@
+'use client'
+
+import SkillCard from "@/components/skill-card";
+import {motion, useInView} from "framer-motion";
+import {useRef} from "react";
+
+interface SkillProps {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+}
+
+export default function Skills({skills}: { skills: SkillProps[] }) {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, {once: true});
+
+    return (
+        <div className={"flex items-center justify-center"}>
+            <ul ref={ref}
+                className={"w-[350px] md:w-[450px] items-center justify-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"}>
+                {skills.map((skill, index) => (
+                    <motion.li
+                        key={index}
+                        initial={{opacity: 0, x: index % 3 === 0 ? -50 : 50}}
+                        animate={isInView ? {opacity: 1, x: 0} : {opacity: 0, x: 50}}
+                        transition={{duration: 0.5, delay: index * 0.2}}
+                        className={"flex items-center justify-center "}
+                    >
+                        <SkillCard skill={skill}/>
+                    </motion.li>
+                ))}
+            </ul>
+        </div>
+    )
+}
