@@ -3,15 +3,10 @@
 import SkillCard from "@/components/skill-card";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
+import {Dictionary} from "@/dictionaries/utils/dictionary-type";
 
-interface SkillProps {
-    title: string;
-    description: string;
-    icon: React.ReactNode;
-}
-
-export default function Skills({skills}: { skills: SkillProps[] }) {
-    const ref = useRef<HTMLDivElement>(null);
+export default function Skills({skills}: { skills: Dictionary["skills"] }) {
+    const ref = useRef<HTMLUListElement>(null);
     const isInView = useInView(ref, {once: true});
 
     return (

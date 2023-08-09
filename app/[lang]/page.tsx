@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 
 export default async function Home({params: {lang}}: { params: { lang: string } }) {
     const dict = await getDictionary(lang)
-    const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+    const shuffle = (arr:typeof dict.skills) => [...arr].sort(() => Math.random() - 0.5);
     const skills = shuffle(dict.skills)
 
 

@@ -3,14 +3,9 @@
 import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
+import {Dictionary} from "@/dictionaries/utils/dictionary-type";
 
-export interface SkillCardProps {
-    title: string;
-    description: string;
-    icon: React.ReactNode;
-}
-
-export default function SkillCard({skill}: { skill: SkillCardProps }) {
+export default function SkillCard({skill}: { skill: Dictionary["skills"][number] }) {
     const {title, description, icon} = skill;
     const ref = useRef<HTMLParagraphElement>(null);
     const isInView = useInView(ref, {once: true});
