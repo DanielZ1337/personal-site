@@ -6,6 +6,7 @@ import {ReactNode} from "react";
 import Chip from "@/components/chip";
 import {siteConfig} from "@/lib/site";
 import {BsArrowRight, BsGithub} from "react-icons/bs";
+import LanguageSelector from "@/components/language-selector";
 
 const headerLinks = [
     {
@@ -49,7 +50,7 @@ export default function Header() {
                     ))}
                 </ul>
                 <div className={"flex items-center gap-2"}>
-                    <Chip
+                    {/*<Chip
                         prompt={
                             <>
                                 Visit
@@ -59,7 +60,8 @@ export default function Header() {
                         link={siteConfig.links.github_repo}
                     >
                         <BsGithub/> Github
-                    </Chip>
+                    </Chip>*/}
+                    <LanguageSelector/>
                     <ThemeSwitcher/>
                 </div>
             </div>

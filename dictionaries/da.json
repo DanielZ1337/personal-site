@@ -1,0 +1,14 @@
+{
+  "errors": {
+    "NotFound": {
+      "title": "Ikke fundet",
+      "detail": "Den side du leder efter findes ikke."
+    }
+  },
+  "navbar": {
+    "home": "Hjem",
+    "about": "Om",
+    "contact": "Kontakt",
+    "language": "Sprog"
+  }
+}

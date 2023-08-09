@@ -1,0 +1,14 @@
+{
+  "errors": {
+    "NotFound": {
+      "title": "Not Found",
+      "detail": "The requested resource could not be found"
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  }
+}

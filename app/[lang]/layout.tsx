@@ -1,11 +1,13 @@
 import Providers from '@/components/providers'
-import './globals.css'
+import '@/app/globals.css'
 import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import {cn} from "@/lib/utils";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import {siteConfig} from "@/lib/site";
+import {Suspense} from "react";
+import {Toaster} from "@/components/ui/toaster";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -103,20 +105,23 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-                                       children,
+                                       children, params: {lang},
                                    }: {
-    children: React.ReactNode
+    children: React.ReactNode, params: { lang: string }
 }) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang={lang} suppressHydrationWarning>
         <body className={cn('min-h-[100dvh] font-sans antialiased leading-6', inter.className)}>
-        <Providers>
-            <div className="relative flex min-h-[100dvh] flex-col">
-                <Header/>
-                <div className="flex-1 mt-16">{children}</div>
-                <Footer/>
-            </div>
-        </Providers>
+        <Suspense>
+            <Providers>
+                <div className="relative flex min-h-[100dvh] flex-col">
+                    <Header/>
+                    <div className="flex-1 flex-col flex mt-16">{children}</div>
+                    <Footer/>
+                </div>
+                <Toaster/>
+            </Providers>
+        </Suspense>
         </body>
         </html>
     )
