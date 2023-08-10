@@ -10,6 +10,7 @@ import {
     SiTypescript
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
+import {siteConfig} from "@/lib/site";
 
 const ICON_SIZE = "2rem";
 
@@ -42,7 +43,7 @@ export default {
                     "title": "Kontakt"
                 },
                 "resume": {
-                    "anchor": "#cv",
+                    "anchor": "/da/resume.pdf",
                     "title": "CV"
                 }
             }
@@ -69,8 +70,9 @@ export default {
         "visit": "Besøg",
         "skills": "Færdigheder",
         "skillsDescription": "Her er nogle af de færdigheder, jeg har opnået gennem min uddannelse og projekter.",
-        "about": "Jeg er en 21-årig softwareingeniør fra Danmark. Jeg studerer i øjeblikket datalogi på Aalborg Universitet og er i mit 4. semester. Jeg har en passion for programmering og er altid på udkig efter at lære nye ting. Jeg arbejder i øjeblikket på et par projekter, som du kan læse mere om nedenfor.",
-        "contact": "Du kan kontakte mig ved at sende en e-mail til mailto:danielz2nd@hotmai.com",
+        "hello": `Hej, mit navn er `,
+        "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 2. semester.",
+        "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
         "projects": "Projekter",
         "projectsDescription": "Her er nogle af de projekter, jeg har arbejdet på. Du kan finde flere på min GitHub-profil.",

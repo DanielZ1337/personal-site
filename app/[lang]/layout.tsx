@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import {siteConfig} from "@/lib/site";
 import {Suspense} from "react";
 import {Toaster} from "@/components/ui/toaster";
+import {domAnimation, domMax, LazyMotion} from "framer-motion";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -102,7 +103,15 @@ export const metadata: Metadata = {
         {
             name: siteConfig.creator,
             url: siteConfig.links.github,
-        }
+        },
+        {
+            name: siteConfig.creator,
+            url: siteConfig.links.linkedin,
+        },
+        {
+            name: siteConfig.creator,
+            url: siteConfig.links.email,
+        },
     ],
     other: {
         'theme-color': '#000000',

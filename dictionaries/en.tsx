@@ -1,5 +1,6 @@
 import {
-    SiCplusplus, SiGit,
+    SiCplusplus,
+    SiGit,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
@@ -41,7 +42,7 @@ export default {
                     "title": "Contact"
                 },
                 "resume": {
-                    "anchor": "#cv",
+                    "anchor": "/da/resume.pdf",
                     "title": "CV"
                 }
             }
@@ -68,13 +69,15 @@ export default {
         "visit": "Visit",
         "skills": "Skills",
         "skillsDescription": "Here are some of the skills I've gained through my education and projects.",
-        "about": "I'm a 21 year old software engineer from Denmark. I'm currently studying Computer Science at Aalborg University, and I'm in my 4th semester. I have a passion for programming and I'm always looking to learn new things. I'm currently working on a couple of projects, which you can read more about below.",
-        "contact": "You can contact me by sending an email to mailto:danielz2nd@hotmai.com",
+        "hello": `Hello, my name is `,
+        "about": "I'm a 21 year old software engineer from Denmark. I'm currently studying Bachelor of Engineering in Software Technology at University of Southern Denmark, and I'm on my 2nd semester.",
+        "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
         "projects": "Projects",
         "projectsDescription": "Here are some of the projects I've worked on. You can find more on my GitHub profile.",
         "projectsDescription2": "I've worked on a couple of projects, both alone and with others. I've worked on both frontend and backend, and I've worked with both relational and non-relational databases. I've also worked with both TypeScript and JavaScript.",
         "projectsDescription3": "I've worked with React and Next.js, and I've also worked with Node.js. I've worked with both PostgreSQL and MongoDB, and I've also worked with Redis. I've worked with both JavaScript and TypeScript.",
+
     },
     "skills": [
         {
@@ -94,7 +97,7 @@ export default {
         },
         {
             "title": "Java",
-            "description": "I studied Java at university for a few semesters and scored top grades (12) in both.",
+            "description": "I studied Java at university for a couple of semesters and scored top grades (12) in both.",
             "icon": <DiJava size={ICON_SIZE}/>
         },
         {

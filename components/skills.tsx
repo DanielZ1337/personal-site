@@ -1,7 +1,7 @@
 'use client'
 
 import SkillCard from "@/components/skill-card";
-import {motion, useInView} from "framer-motion";
+import {m, useInView} from "framer-motion";
 import {useRef} from "react";
 import {Dictionary} from "@/dictionaries/utils/dictionary-type";
 
@@ -14,7 +14,7 @@ export default function Skills({skills}: { skills: Dictionary["skills"] }) {
             <ul ref={ref}
                 className={"w-[350px] md:w-[450px] items-center justify-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"}>
                 {skills.map((skill, index) => (
-                    <motion.li
+                    <m.li
                         key={index}
                         initial={{opacity: 0, x: index % 3 === 0 ? -50 : 50}}
                         animate={isInView ? {opacity: 1, x: 0} : {opacity: 0, x: 50}}
@@ -22,7 +22,7 @@ export default function Skills({skills}: { skills: Dictionary["skills"] }) {
                         className={"flex items-center justify-center "}
                     >
                         <SkillCard skill={skill}/>
-                    </motion.li>
+                    </m.li>
                 ))}
             </ul>
         </div>

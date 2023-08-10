@@ -7,7 +7,7 @@ export default async function Footer({lang}:{ lang: string }) {
     const dict = await getDictionary(lang)
 
     return (
-        <div className={"w-full flex justify-center h-32 items-center space-x-4 whitespace-nowrap"}>
+        <div className={"dark:bg-black w-full flex justify-center h-32 items-center space-x-4 whitespace-nowrap"}>
             <p>{dict.footer.creator}</p>
             <Chip
                 prompt={

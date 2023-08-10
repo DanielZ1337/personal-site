@@ -40,7 +40,7 @@ export default function NotFound() {
                 {dict?.errors.NotFound.page.title}
             </div>
             <button className="mt-5 group">
-                <a
+                <div
                     className="relative inline-block text-sm font-medium text-primary group active:text-primary-foreground focus:outline-none focus:ring"
                 >
                     <span
@@ -50,7 +50,7 @@ export default function NotFound() {
                     <span className="relative block px-8 py-3 bg-foreground dark:bg-black/90 border border-primary">
                         <Link href={`/${lang}`} className={"group-active:shadow-2xl group-active:shadow-primary"}>{dict?.errors.NotFound.page.message}</Link>
                     </span>
-                </a>
+                </div>
             </button>
         </div>
     )
