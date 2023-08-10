@@ -38,10 +38,11 @@ export const config = {
         // Skip all static assets
         // '/((?!static).*)',
         // do it with static assets file extensions
-        '/((?!static).*(?:js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))',
+        // '/((?!static).*(?:js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))',
         // Optional: only run on root (/) URL
         // '/'
 
+        // "/((?!api|static|.*\\..*|_next).*)",
         '/((?!api|_next/static|_next/image|favicon.ico).*)',
     ],
 }
