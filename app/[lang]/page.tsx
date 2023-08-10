@@ -19,8 +19,8 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
 
     return (
         <div className={"flex-1 flex-col flex text-center"}>
-            <div className={"h-[100dvh] w-full top-0 left-0 -z-10  bg-background absolute"}/>
-            <div className={"h-[100dvh] -z-10"}>
+            <div className={"h-[100dvh] w-full top-0 left-0 -z-50 bg-background absolute"}/>
+            <div className={"h-[100dvh] z-10"}>
                 <div className={"flex-1 flex-col flex justify-center items-center h-full"}>
                     <div className={"relative w-80 h-80 -mt-20 mb-14"}>
                         <Image className={"rounded-full object-cover"} src={avatar} alt={siteConfig.title} fill/>

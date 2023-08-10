@@ -25,17 +25,9 @@ export function middleware(request: NextRequest) {
 
         // e.g. incoming request is /products
         // The new URL is now /en-US/products
-
-        const response = NextResponse.redirect(
+        return NextResponse.redirect(
             new URL(`/${locale}${pathname ?? `/${pathname}`}`, request.url)
         )
-        response.headers.set('Access-Control-Allow-Origin', '*')
-        return response
-
-
-        /*return NextResponse.redirect(
-            new URL(`/${locale}${pathname ?? `/${pathname}`}`, request.url)
-        )*/
     }
 }
 
@@ -51,5 +43,7 @@ export const config = {
         // '/'
 
         "/((?!api|static|.*\\..*|_next).*)",
+        // also include static assets file extensions
+        "/((?!api|static|.*\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|pdf)).*)",
     ],
 }
