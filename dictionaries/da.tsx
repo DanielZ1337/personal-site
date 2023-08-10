@@ -31,7 +31,7 @@ export default {
         "links": [
             {
                 "home": {
-                    "anchor": "#hjem",
+                    "anchor": "/da",
                     "title": "Hjem"
                 },
                 "about": {

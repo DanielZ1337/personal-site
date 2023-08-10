@@ -30,7 +30,7 @@ export default {
         "links": [
             {
                 "home": {
-                    "anchor": "#home",
+                    "anchor": "/en",
                     "title": "Home"
                 },
                 "about": {

@@ -9,6 +9,7 @@ import {siteConfig} from "@/lib/site";
 import {Suspense} from "react";
 import {Toaster} from "@/components/ui/toaster";
 import {domAnimation, domMax, LazyMotion} from "framer-motion";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -136,6 +137,7 @@ export default function RootLayout({
                     <Footer lang={lang}/>
                 </div>
                 <Toaster/>
+                <ScrollToTop/>
             </Suspense>
         </Providers>
         </body>

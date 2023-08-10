@@ -20,7 +20,7 @@ export default async function Header({lang}: { lang: string }) {
             <div className="flex items-center justify-between p-4 h-16 w-full" style={{
                 width: "min(calc(100vw - 20px), 500px + 40vw)"
             }}>
-                <Link href="/">
+                <Link href={dict.navbar.links[0].home.anchor} className={"z-10"}>
                     <Image src={logo} alt="Logo" className="w-8 h-8"/>
                 </Link>
                 <ul className="flex left-0 absolute w-full text-center items-center justify-center">

@@ -26,12 +26,16 @@ export function middleware(request: NextRequest) {
         // e.g. incoming request is /products
         // The new URL is now /en-US/products
 
-        // handle cors and allow Access-Control-Allow-Origin
-        console.log(request.headers.get('origin'))
-
-        return NextResponse.redirect(
+        const response = NextResponse.redirect(
             new URL(`/${locale}${pathname ?? `/${pathname}`}`, request.url)
         )
+        response.headers.set('Access-Control-Allow-Origin', '*')
+        return response
+
+
+        /*return NextResponse.redirect(
+            new URL(`/${locale}${pathname ?? `/${pathname}`}`, request.url)
+        )*/
     }
 }
 
