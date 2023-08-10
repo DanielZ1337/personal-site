@@ -42,7 +42,7 @@ export const config = {
         // Optional: only run on root (/) URL
         // '/'
 
-        // "/((?!api|static|.*\\..*|_next).*)",
-        '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        "/((?!api|static|.*\\..*|_next).*)",
+        // '/((?!api|_next/static|_next/image|favicon.ico).*)',
     ],
 }
