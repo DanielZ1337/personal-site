@@ -56,7 +56,7 @@ export default function LanguageSelector() {
     }
 
     return (
-        <div>
+        <div className={"z-10"}>
             <Select value={langCode} onValueChange={changeLang}>
                 <SelectTrigger className={"relative overflow-clip"}>
                     <SelectValue aria-label={langCode} className={"absolute"}>

@@ -67,6 +67,7 @@ export default {
         "source": "Kildekode på"
     },
     "text": {
+        "socials": "Sociale medier",
         "visit": "Besøg",
         "skills": "Færdigheder",
         "skillsDescription": "Her er nogle af de færdigheder, jeg har opnået gennem min uddannelse og projekter.",

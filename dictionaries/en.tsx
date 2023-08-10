@@ -66,6 +66,7 @@ export default {
         "source": "Source code on"
     },
     "text": {
+        "socials": "Socials",
         "visit": "Visit",
         "skills": "Skills",
         "skillsDescription": "Here are some of the skills I've gained through my education and projects.",

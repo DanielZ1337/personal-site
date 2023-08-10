@@ -8,8 +8,8 @@ import Footer from "@/components/footer";
 import {siteConfig} from "@/lib/site";
 import {Suspense} from "react";
 import {Toaster} from "@/components/ui/toaster";
-import {domAnimation, domMax, LazyMotion} from "framer-motion";
 import ScrollToTop from "@/components/scroll-to-top";
+import SideNavSocials from "@/components/sidenav-socials";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -129,8 +129,8 @@ export default function RootLayout({
     return (
         <html lang={lang} suppressHydrationWarning>
         <body className={cn('min-h-[100dvh] font-sans antialiased leading-6', inter.className)}>
-        <Providers>
-            <Suspense>
+        <Suspense>
+            <Providers>
                 <div className="relative flex min-h-[100dvh] flex-col">
                     <Header lang={lang}/>
                     <div className="flex-1 flex-col flex mt-16">{children}</div>
@@ -138,8 +138,9 @@ export default function RootLayout({
                 </div>
                 <Toaster/>
                 <ScrollToTop/>
-            </Suspense>
-        </Providers>
+                <SideNavSocials/>
+            </Providers>
+        </Suspense>
         </body>
         </html>
     )

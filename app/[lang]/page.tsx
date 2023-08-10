@@ -6,6 +6,7 @@ import InViewWrapper from "@/components/in-view-wrapper";
 import Image from "next/image";
 import logo from "@/public/logo_old.svg";
 import avatar from "@/public/avatar.jpg";
+import Welcome from "@/components/welcome";
 
 export async function generateStaticParams() {
     return siteConfig.langs.map(lang => ({lang}))
@@ -20,26 +21,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
     return (
         <div className={"flex-1 flex-col flex text-center"}>
             <div className={"h-[100dvh] w-full top-0 left-0 -z-50 bg-background absolute"}/>
-            <div className={"h-[100dvh] z-10"}>
-                <div className={"flex-1 flex-col flex justify-center items-center h-full"}>
-                    <div className={"relative w-80 h-80 -mt-20 mb-14"}>
-                        <Image className={"rounded-full object-cover"} src={avatar} alt={siteConfig.title} fill/>
-                        <div className={"absolute bottom-0 right-0 flex justify-center items-center"}>
-                            <Image src={logo} className={"absolute p-6"} alt={siteConfig.title} width={200} height={200}/>
-                            <div className={"w-full h-full bg-black p-10 rounded-full"}/>
-                        </div>
-                    </div>
-                    <h1 className={"text-4xl font-bold"}>
-                        <p>
-                            {dict.text.hello}
-                            <Link href={siteConfig.links.linkedin}
-                                  className={"text-primary underline"}>{siteConfig.creator}</Link>
-                            !
-                        </p>
-                    </h1>
-                    <p className={"max-w-md text-xl mt-6 mb-5 text-muted-foreground"}>{dict.text.about}</p>
-                </div>
-            </div>
+            <Welcome dict={dict}/>
             <InViewWrapper
                 initial={{opacity: 0, y: 50}}
                 whenInView={{opacity: 1, y: 0}}
