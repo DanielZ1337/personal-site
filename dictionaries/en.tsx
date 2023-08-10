@@ -42,7 +42,7 @@ export default {
                     "title": "Contact"
                 },
                 "resume": {
-                    "anchor": "/da/resume.pdf",
+                    "anchor": "/assets/da/resume.pdf",
                     "title": "CV"
                 }
             }

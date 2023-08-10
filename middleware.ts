@@ -43,7 +43,5 @@ export const config = {
         // '/'
 
         "/((?!api|static|.*\\..*|_next).*)",
-        // also include static assets file extensions
-        "/((?!api|static|.*\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|pdf)).*)",
     ],
 }
