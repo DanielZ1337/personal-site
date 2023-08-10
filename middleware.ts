@@ -13,6 +13,7 @@ function getLocale(request: NextRequest) {
 }
 
 export function middleware(request: NextRequest) {
+    console.log("middleware")
     // Check if there is any supported locale in the pathname
     const pathname = request.nextUrl.pathname
     const pathnameIsMissingLocale = siteConfig.langs.every(
@@ -43,6 +44,6 @@ export const config = {
         // '/'
 
         "/((?!api|static|.*\\..*|_next).*)",
-        // '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        // also include static assets file extensions
     ],
 }
