@@ -9,7 +9,7 @@ const nextConfig = {
         return [
             {
                 //match all routes
-                source: "/.*",
+                source: "/da/resume.pdf",
                 headers: [
                     {key: "Access-Control-Allow-Credentials", value: "true"},
                     {key: "Access-Control-Allow-Origin", value: "*"},
