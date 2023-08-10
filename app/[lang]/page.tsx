@@ -61,9 +61,9 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
 
             <p className="text-xl mt-6 mb-5 text-muted-foreground">
                 {dict.text.resume}
-                <a href="/resume.pdf" className="text-blue-500 underline">
+                <Link href="/resume.pdf" className="text-blue-500 underline">
                     Your Resume
-                </a>
+                </Link>
             </p>
 
         </div>
