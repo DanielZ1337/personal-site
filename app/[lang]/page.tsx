@@ -19,8 +19,8 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
 
 
     return (
-        <div className={"flex-1 flex-col flex text-center"}>
-            <div className={"h-[100dvh] w-full top-0 left-0 -z-50 bg-background absolute"}/>
+        <div className={"flex-1 flex-col flex text-center -mt-16"}>
+            <div className={"h-[100dvh] w-full top-0 left-0 -z-50 bg-background absolute "}/>
             <Welcome dict={dict}/>
             <InViewWrapper
                 initial={{opacity: 0, y: 50}}
