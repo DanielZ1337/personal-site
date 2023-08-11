@@ -14,7 +14,7 @@ export default function HeaderScroll({children}: { children: React.ReactNode }) 
         return () => window.removeEventListener('scroll', handleScroll);
     }, [scrollY]);
 
-    const ANIMATE_WHEN_DISTANCE_FROM_TOP = 50;
+    const ANIMATE_WHEN_DISTANCE_FROM_TOP = 0;
 
     return (
         <m.header

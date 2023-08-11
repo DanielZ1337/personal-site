@@ -26,7 +26,7 @@ export default function ScrollToTop() {
                     <button
                         onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                         className={'p-2 rounded-full bg-primary text-accent-foreground shadow-md transition-all duration-300 hover:bg-accent-foreground hover:text-primary'}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 sm:h-7 sm:w-7" fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                                   d="M5 15l7-7 7 7"/>

@@ -10,7 +10,7 @@ export default function Welcome({dict}: { dict: Dictionary }) {
     return (
         <div className={"h-[100dvh] z-10"}>
             <div className={"flex-1 flex-col flex items-center h-full"}>
-                <div className={"relative w-96 h-96 mb-14 mt-40"}>
+                <div className={"relative w-96 h-96 mt-40"}>
                     <InViewWrapper
                         initial={{opacity: 0}}
                         whenInView={{opacity: 1}}
@@ -26,7 +26,7 @@ export default function Welcome({dict}: { dict: Dictionary }) {
                         </div>
                     </InViewWrapper>
                 </div>
-                <h1 className={"text-4xl font-bold"}>
+                <h1 className={"mt-14 text-4xl font-bold"}>
                     <InViewWrapper
                         initial={{opacity: 0, y: 50}}
                         whenInView={{opacity: 1, y: 0}}
