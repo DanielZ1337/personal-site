@@ -2,7 +2,7 @@
 
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {siteConfig} from "@/lib/site";
-import {useEffect, useState} from "react";
+import {Suspense, useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import Image from "next/image";
 import useDictionary from "@/dictionaries/useDictionary";
@@ -21,7 +21,7 @@ export default function LanguageSelector() {
 
     }, []);
 
-    const {data, error} = useDictionary(langCode)
+    const {data, isLoading, error} = useDictionary(langCode)
 
     useEffect(() => {
 
@@ -36,16 +36,24 @@ export default function LanguageSelector() {
         }
     }, [data, langCode]);
 
-    if (!langCode || !langName) {
-        return null
-    }
 
     if (availableLanguages.length <= 1) {
         return null
     }
 
-    if (!data) {
-        return null
+    if (isLoading || !data) {
+        return (
+            <Select>
+                <SelectTrigger className={"relative overflow-clip"}>
+                    <SelectValue aria-label={langCode} className={"absolute"}>
+                        {langName && <span>{langName}</span>}
+                        {langCode && <Image src={`/languages/${langCode}.svg`}
+                                            alt={' Language'}
+                                            fill className={"object-cover h-full absolute top-0 left-0 opacity-10"}/>}
+                    </SelectValue>
+                </SelectTrigger>
+            </Select>
+        )
     }
 
     function changeLang(lang: string) {
@@ -60,10 +68,12 @@ export default function LanguageSelector() {
             <Select value={langCode} onValueChange={changeLang}>
                 <SelectTrigger className={"relative overflow-clip"}>
                     <SelectValue aria-label={langCode} className={"absolute"}>
-                        <span>{langName}</span>
-                        <Image src={`/languages/${langCode}.svg`}
-                               alt={data.languages[langCode as keyof typeof data.languages] + ' Language'}
-                               fill className={"object-cover h-full absolute top-0 left-0 opacity-10"}/>
+                        <Suspense>
+                            <span>{langName}</span>
+                            <Image src={`/languages/${langCode}.svg`}
+                                   alt={data.languages[langCode as keyof typeof data.languages] + ' Language'}
+                                   fill className={"object-cover h-full absolute top-0 left-0 opacity-10"}/>
+                        </Suspense>
                     </SelectValue>
                 </SelectTrigger>
                 <SelectContent>

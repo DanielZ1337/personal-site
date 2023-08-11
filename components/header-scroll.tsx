@@ -13,10 +13,13 @@ export default function HeaderScroll({children}: { children: React.ReactNode }) 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [scrollY]);
+
+    const ANIMATE_WHEN_DISTANCE_FROM_TOP = 50;
+
     return (
         <m.header
             initial={{borderBottom: '1px solid rgba(0,0,0,0)', boxShadow: 'none'}}
-            animate={{borderBottom: scrollY > 0 ? theme==="dark" ? '1px solid rgba(38,38,38,1)' : '1px solid rgba(20,20,20,0.05)' : '1px solid rgba(0,0,0,0)', boxShadow: scrollY > 0 ? theme==="dark" ? '0 0 10px rgba(0,0,0,0.5)': '0 0 7px rgba(0,0,0,0.5)' : 'none'}}
+            animate={{borderBottom: scrollY > ANIMATE_WHEN_DISTANCE_FROM_TOP ? theme==="dark" ? '1px solid rgba(38,38,38,1)' : '1px solid rgba(20,20,20,0.05)' : '1px solid rgba(0,0,0,0)', boxShadow: scrollY > ANIMATE_WHEN_DISTANCE_FROM_TOP ? theme==="dark" ? '0 0 10px rgba(0,0,0,0.5)': '0 0 7px rgba(0,0,0,0.5)' : 'none'}}
 
 
             className={'backdrop-blur-xl dark:shadow-md shadow border-b transition-all duration-500 fixed w-full items-center justify-center flex z-20'}>

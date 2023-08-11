@@ -6,10 +6,10 @@ import {cn} from "@/lib/utils";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import {siteConfig} from "@/lib/site";
-import {Suspense} from "react";
 import {Toaster} from "@/components/ui/toaster";
 import ScrollToTop from "@/components/scroll-to-top";
 import SideNavSocials from "@/components/sidenav-socials";
+import {Suspense} from "react";
 
 const inter = Inter({subsets: ['latin']})
 

@@ -8,12 +8,12 @@ export default function Providers({children}: { children: React.ReactNode }) {
     const queryClient = new QueryClient()
 
     return (
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <QueryClientProvider client={queryClient}>
+        <QueryClientProvider client={queryClient}>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                 <LazyMotion features={domMax} strict>
                     {children}
                 </LazyMotion>
-            </QueryClientProvider>
-        </ThemeProvider>
+            </ThemeProvider>
+        </QueryClientProvider>
     )
 }

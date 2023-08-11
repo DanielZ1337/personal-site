@@ -56,6 +56,29 @@
     @apply border-border;
   }
   body {
+    margin-left: calc(100vw - 100%);
     @apply bg-background text-foreground;
   }
+
+  html{
+    overflow-y: scroll;
+    margin-right: 0;
+  }
+
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: hsl(var(--background));
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: hsl(var(--border));
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsl(var(--muted-foreground));
+    }
+
 }
