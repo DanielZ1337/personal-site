@@ -1,7 +1,7 @@
 'use client'
 
 import {siteConfig} from "@/lib/site";
-import {BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiMailSend} from "react-icons/bi";
+import {BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiLogoYoutube, BiMailSend} from "react-icons/bi";
 import Link from "next/link";
 import {m} from "framer-motion";
 import {useParams} from "next/navigation";
@@ -39,7 +39,7 @@ export default function SideNavSocials() {
         },
         "YouTube": {
             "href": siteConfig.links.youtube,
-            "icon": <BiLogoTwitter/>
+            "icon": <BiLogoYoutube/>
         }
     }
 
