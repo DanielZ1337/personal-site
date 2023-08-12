@@ -6,6 +6,12 @@ import {ReactNode} from "react";
 import LanguageSelector from "@/components/language-selector";
 import {getDictionary} from "@/dictionaries/utils/dictionaries";
 import HeaderScroll from "@/components/header-scroll";
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem, NavigationMenuLink,
+    NavigationMenuList, NavigationMenuTrigger
+} from "@/components/ui/navigation-menu";
 
 export default async function Header({lang}: { lang: string }) {
     const dict = await getDictionary(lang)
@@ -33,17 +39,6 @@ export default async function Header({lang}: { lang: string }) {
                     ))}
                 </ul>
                 <div className={"flex items-center gap-2"}>
-                    {/*<Chip
-                        prompt={
-                            <>
-                                Visit
-                                <BsArrowRight/>
-                            </>
-                        }
-                        link={siteConfig.links.github_repo}
-                    >
-                        <BsGithub/> Github
-                    </Chip>*/}
                     <LanguageSelector/>
                     <ThemeSwitcher/>
                 </div>
@@ -57,9 +52,16 @@ interface NavLinkProps {
     readonly children: ReactNode
 }
 
+function shouldOpenInNewTab(href: string) {
+    return href.endsWith('.pdf');
+
+}
+
 function NavLink({href, children}: NavLinkProps) {
     return (
         <Link href={href}
+              target={shouldOpenInNewTab(href) ? "_blank" : '_self'}
+              rel={shouldOpenInNewTab(href) ? "noopener noreferrer" : undefined}
               className="group text-accent-foreground hover:text-primary">
             {children}
         </Link>
