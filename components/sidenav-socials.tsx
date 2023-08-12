@@ -54,7 +54,7 @@ export default function SideNavSocials() {
                exit={{opacity: 0, x: 50}}
         >
             <p className={"text-center font-semibold text-secondary-foreground"}>{dict.text.socials}</p>
-            <div className={"flex flex-col gap-4 h-full justify-center items-center absolute left-0 right-0 bottom-0 top-0 m-auto"}>
+            <div className={"flex flex-col gap-4 h-full justify-center items-center absolute left-0 right-0 bottom-0 top-14 m-auto"}>
                 {Object.entries(socials).map(([key, value]) => (
                     <Link href={value.href} key={key}
                           className={"flex justify-center items-center p-2 px-4 rounded-full hover:bg-primary hover:text-background text-primary text-2xl"}
