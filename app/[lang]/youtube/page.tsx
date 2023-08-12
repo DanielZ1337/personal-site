@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Page({params: {lang}}: { params: { lang: string } }) {
-    const youtubeData = await fetch('https://youtube.googleapis.com/youtube/v3/search?part=id,snippet&channelId=UCgwEofmAfTn9Crpc3NdYSQw&maxResults=12&key=AIzaSyCN5qThtBywG_VLnafinhpQoT7LICY4M2c&type=video').then(async res => await res.json()) as YouTubeSearchReponseSnippetIdVideo
+    const youtubeData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=id,snippet&channelId=UCgwEofmAfTn9Crpc3NdYSQw&maxResults=12&key=${process.env.YOUTUBE_KEY}&type=video`).then(async res => await res.json()) as YouTubeSearchReponseSnippetIdVideo
     const videos = youtubeData.items
     const dict = await getDictionary(lang)
 
