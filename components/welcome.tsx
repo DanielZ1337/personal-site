@@ -9,7 +9,7 @@ import type {Dictionary} from '@/dictionaries/utils/dictionary-type';
 export default function Welcome({dict}: { dict: Dictionary }) {
     return (
         <div className={"h-[100dvh] z-10 bg-neutral-200 dark:bg-black"}>
-            <div className={"flex-1 flex-col flex items-center h-full my-40 bg-gradient-to-b from-neutral-200 dark:from-black from-50% to-background to-90%"}>
+            <div className={"flex-1 flex-col flex items-center h-full my-40 bg-gradient-to-b from-neutral-200 dark:from-black from-50% to-100% to-background dark:to-background"}>
                 <div>
                     <div className={"relative w-96 h-96"}>
                         <InViewWrapper
