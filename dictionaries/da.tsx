@@ -10,9 +10,8 @@ import {
     SiTypescript
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
-import {siteConfig} from "@/lib/site";
 
-const ICON_SIZE = "2rem";
+const ICON_SIZE = "2.5rem";
 
 export default {
     "errors": {
@@ -71,14 +70,15 @@ export default {
         "visit": "Besøg",
         "skills": "Færdigheder",
         "skillsDescription": "Her er nogle af de færdigheder, jeg har opnået gennem min uddannelse og projekter.",
+        "skillsDescription2": "Disse er de erfaringer, jeg har fået gennem projekter på gymnasiet, universitetet og fritidsprojekter.",
         "hello": `Hej, mit navn er `,
         "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 2. semester.",
         "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
         "projects": "Projekter",
-        "projectsDescription": "Her er nogle af de projekter, jeg har arbejdet på. Du kan finde flere på min GitHub-profil.",
-        "projectsDescription2": "Jeg har arbejdet på et par projekter, både alene og sammen med andre. Jeg har arbejdet både med frontend og backend og har arbejdet med både relationelle og ikke-relationelle databaser. Jeg har også arbejdet med både TypeScript og JavaScript.",
-        "projectsDescription3": "Jeg har arbejdet med React og Next.js, og jeg har også arbejdet med Node.js. Jeg har arbejdet med både PostgreSQL og MongoDB, og jeg har også arbejdet med Redis. Jeg har arbejdet med både JavaScript og TypeScript.",
+        "projectsDescription": "Går lige nu på 3. semester på SDU, hvor jeg læser til softwareingeniør. Her har jeg arbejdet mest med PostgreSQL og Java.",
+        "projectsDescription2": "Jeg har arbejdet på et par projekter, både alene og sammen med andre. Så har jeg også arbejdet med frontend og backend, samt med både relationelle og ikke-relationelle databaser.",
+        "projectsDescription3": "Derefter har jeg også arbejdet med Next.js og React, hvor Next.js har været min primære erfaring med React. Dette har været i JavaScript og TypeScript.",
     },
     "skills": [
         {

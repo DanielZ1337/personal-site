@@ -8,23 +8,26 @@ import type {Dictionary} from '@/dictionaries/utils/dictionary-type';
 
 export default function Welcome({dict}: { dict: Dictionary }) {
     return (
-        <div className={"h-[100dvh] z-10"}>
-            <div className={"flex-1 flex-col flex items-center h-full"}>
-                <div className={"relative w-96 h-96 mt-40"}>
-                    <InViewWrapper
-                        initial={{opacity: 0}}
-                        whenInView={{opacity: 1}}
-                        whenNotInView={{opacity: 0}}
-                        transition={{duration: 0.5}}
-                    >
-                        <Image className={"rounded-full object-cover"} placeholder={"blur"} src={avatar}
-                               alt={siteConfig.title} fill/>
-                        <div className={"absolute bottom-0 right-0 flex justify-center items-center"}>
-                            <Image src={logo} className={"absolute p-6"} alt={siteConfig.title} width={200}
-                                   height={200}/>
-                            <div className={"w-full h-full bg-black p-10 rounded-full"}/>
-                        </div>
-                    </InViewWrapper>
+        <div className={"h-[100dvh] z-10 bg-neutral-200 dark:bg-black"}>
+            <div className={"flex-1 flex-col flex items-center h-full my-40 bg-gradient-to-b from-neutral-200 dark:from-black from-50% to-background to-90%"}>
+                <div>
+                    <div className={"relative w-96 h-96"}>
+                        <InViewWrapper
+                            initial={{opacity: 0}}
+                            whenInView={{opacity: 1}}
+                            whenNotInView={{opacity: 0}}
+                            transition={{duration: 0.5}}
+                        >
+                            <Image className={"rounded-full object-cover "} placeholder={"blur"} src={avatar}
+                                   alt={siteConfig.title} fill/>
+                            <div className={"absolute bottom-0 right-0 flex justify-center items-center"}>
+                                <Image src={logo} className={"absolute p-6 object-contain"} alt={siteConfig.title}
+                                       width={200}
+                                       height={200}/>
+                                <div className={"w-full h-full bg-black p-10 rounded-full"}/>
+                            </div>
+                        </InViewWrapper>
+                    </div>
                 </div>
                 <h1 className={"mt-14 text-4xl font-bold"}>
                     <InViewWrapper

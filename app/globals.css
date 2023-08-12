@@ -56,17 +56,17 @@
     @apply border-border;
   }
   body {
-    margin-left: calc(100vw - 100%);
+    width: 99vw;
     @apply bg-background text-foreground;
+    text-wrap: balance;
   }
 
   html{
     overflow-y: scroll;
-    margin-right: 0;
   }
 
     ::-webkit-scrollbar {
-        width: 15px;
+        width: 1vw;
     }
 
     ::-webkit-scrollbar-track {

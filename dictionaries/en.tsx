@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
 
-const ICON_SIZE = "2rem";
+const ICON_SIZE = "2.5rem";
 
 export default {
     "errors": {
@@ -66,19 +66,19 @@ export default {
         "source": "Source code on"
     },
     "text": {
-        "socials": "Socials",
+        "socials": "Social Media",
         "visit": "Visit",
         "skills": "Skills",
-        "skillsDescription": "Here are some of the skills I've gained through my education and projects.",
-        "hello": `Hello, my name is `,
-        "about": "I'm a 21 year old software engineer from Denmark. I'm currently studying Bachelor of Engineering in Software Technology at University of Southern Denmark, and I'm on my 2nd semester.",
+        "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",
+        "skillsDescription2": "These are the experiences I have gained through projects in high school, university, and personal projects.",
+        "hello": "Hello, my name is ",
+        "about": "I am a 21-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 2nd semester.",
         "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
         "projects": "Projects",
-        "projectsDescription": "Here are some of the projects I've worked on. You can find more on my GitHub profile.",
-        "projectsDescription2": "I've worked on a couple of projects, both alone and with others. I've worked on both frontend and backend, and I've worked with both relational and non-relational databases. I've also worked with both TypeScript and JavaScript.",
-        "projectsDescription3": "I've worked with React and Next.js, and I've also worked with Node.js. I've worked with both PostgreSQL and MongoDB, and I've also worked with Redis. I've worked with both JavaScript and TypeScript.",
-
+        "projectsDescription": "I am currently in my 3rd semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
+        "projectsDescription2": "I have been involved in several projects, both individually and collaboratively. I have experience with both frontend and backend development, as well as working with relational and non-relational databases.",
+        "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript.",
     },
     "skills": [
         {
