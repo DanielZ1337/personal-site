@@ -24,12 +24,10 @@ export default function LanguageSelector() {
     const {data, isLoading, error} = useDictionary(langCode)
 
     useEffect(() => {
-
         if (!data || !langCode) {
             return
         }
 
-        // find language name from useDictionary
         if (data && langCode) {
             const langName = data.languages[langCode as keyof typeof data.languages]
             setLangName(langName)
@@ -43,16 +41,14 @@ export default function LanguageSelector() {
 
     if (isLoading || !data) {
         return (
-            <Select>
-                <SelectTrigger className={"relative overflow-clip"}>
-                    <SelectValue aria-label={langCode} className={"absolute"}>
-                        {langName && <span>{langName}</span>}
-                        {langCode && <Image src={`/languages/${langCode}.svg`}
-                                            alt={' Language'}
-                                            fill className={"object-cover h-full absolute top-0 left-0 opacity-10"}/>}
-                    </SelectValue>
-                </SelectTrigger>
-            </Select>
+            <div className={"relative overflow-clip"}>
+                <div aria-label={langCode} className={"absolute"}>
+                    {langName && <span>{langName}</span>}
+                    {langCode && <Image src={`/languages/${langCode}.svg`}
+                                        alt={' Language'}
+                                        fill className={"object-cover h-full absolute top-0 left-0 opacity-10"}/>}
+                </div>
+            </div>
         )
     }
 
