@@ -36,6 +36,10 @@ export default function SideNavSocials() {
         "Twitter": {
             "href": siteConfig.links.twitter,
             "icon": <BiLogoTwitter/>
+        },
+        "YouTube": {
+            "href": siteConfig.links.youtube,
+            "icon": <BiLogoTwitter/>
         }
     }
 
