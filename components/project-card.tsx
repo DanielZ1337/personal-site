@@ -1,18 +1,24 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 
-export default function ProjectCard() {
+interface ProjectCardProps {
+    readonly title: string
+    readonly description?: string
+    readonly footer?: string
+    readonly children: React.ReactNode
+
+}
+
+export default function ProjectCard({title, description, footer, children}: ProjectCardProps) {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
+                <CardTitle>{title}</CardTitle>
+                {description && <CardDescription>{description}</CardDescription>}
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>{children}</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
+            {footer && <CardFooter>{footer}</CardFooter>}
         </Card>
     )
 }

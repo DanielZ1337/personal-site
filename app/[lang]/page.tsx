@@ -4,6 +4,7 @@ import Skills from "@/components/skills";
 import InViewWrapper from "@/components/in-view-wrapper";
 import Welcome from "@/components/welcome";
 import Link from "next/link";
+import ProjectBox from "@/components/project-box";
 
 export async function generateStaticParams() {
     return siteConfig.langs.map(lang => ({lang}))
@@ -13,6 +14,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
     const dict = await getDictionary(lang)
     const shuffle = (arr: typeof dict.skills) => [...arr].sort(() => Math.random() - 0.5);
     const skills = shuffle(dict.skills)
+    console.log(dict.projects[0])
 
 
     return (
@@ -67,9 +69,15 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                     </div>
                 </InViewWrapper>
             </div>
-            <div id={dict.navbar.links[0].projects.id} className={"bg-background min-h-screen"}>
+            <div id={dict.navbar.links[0].projects.id} className={"bg-background min-h-screen max-w-[60vw]"}>
                 <div className={"mt-40"}>
                     <h1 className={"text-5xl font-bold"}>{dict.text.projects}</h1>
+                    {dict.projects.map((project, index) => (
+                        <ProjectBox key={project.title} title={project.title} description={project.description}
+                                    image={project.image} links={project.links}
+                                    technologies={project.technologies} icons={project.icons} lang={lang}/>
+                    ))}
+
                 </div>
             </div>
 

@@ -1,13 +1,14 @@
 import {
+    SiBootstrap,
     SiCplusplus,
-    SiGit,
+    SiGit, SiGithub,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
     SiPostgresql,
     SiReact,
-    SiRedis,
-    SiTypescript
+    SiRedis, SiSocketdotio, SiTailwindcss,
+    SiTypescript, SiVercel
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
 
@@ -88,6 +89,7 @@ export default {
         "projectsDescription": "Går lige nu på 3. semester på SDU, hvor jeg læser til softwareingeniør. Her har jeg arbejdet mest med PostgreSQL og Java.",
         "projectsDescription2": "Jeg har arbejdet på et par projekter, både alene og sammen med andre. Så har jeg også arbejdet med frontend og backend, samt med både relationelle og ikke-relationelle databaser.",
         "projectsDescription3": "Derefter har jeg også arbejdet med Next.js og React, hvor Next.js har været min primære erfaring med React. Dette har været i JavaScript og TypeScript (bedst).",
+        "technologiesused": "Teknologier brugt",
     },
     "skills": [
         {
@@ -137,6 +139,253 @@ export default {
             "title": "Git",
             "icon": <SiGit size={ICON_SIZE}/>
         },
+    ],
+    "projects": [
+        {
+            "title": "Personlig Hjemmeside",
+            "description": "Denne hjemmeside er min personlige hjemmeside, hvor jeg fremviser mine projekter og færdigheder.",
+            "image": "/images/projects/personal-website.png",
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": "https://github.com/danielz1337/personal-website"
+                },
+                {
+                    "title": "Besøg",
+                    "url": "https://danielz.dev/"
+                }
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS",
+                "Vercel"
+            ],
+            "icons": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                }
+            ]
+        },
+        {
+            "title": "ValorVault",
+            "description": "ValorVault er en hjemmeside, der giver dig mulighed for at følge dine Valorant-statistikker. Den er bygget med Next.js og bruger Valorant API'en til at hente data.",
+            "image": "/images/projects/valorvault.png",
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": "https://github.com/danielz1337/valorvault"
+                },
+                {
+                    "title": "Besøg",
+                    "url": "https://valorvault.danielz.dev/"
+                }
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS",
+                "Vercel"
+            ],
+            "icons": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                },
+                {
+                    "icon": <SiGithub size={ICON_SIZE}/>,
+                    "title": "GitHub API"
+                }
+            ]
+        },
+        {
+            "title": "E-Handel",
+            "description": "Dette er en e-handels hjemmeside, bygget med Next.js og Commerce.js. Det er en simpel hjemmeside, der giver dig mulighed for at tilføje produkter til din indkøbskurv og foretage betaling.",
+            "image": "/images/projects/e-commerce.png",
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": "https://github.com/danielz1337/e-commerce"
+                },
+                {
+                    "title": "Besøg",
+                    "url": "https://e-commerce.danielz.dev/"
+                }
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Bootstrap",
+                "Vercel",
+                "PostgreSQL"
+            ],
+            "icons": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiBootstrap size={ICON_SIZE}/>,
+                    "title": "Bootstrap"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                },
+                {
+                    "icon": <SiPostgresql size={ICON_SIZE}/>,
+                    "title": "PostgreSQL"
+                }
+            ]
+        },
+        {
+            "title": "GitHub Markdown Notes App",
+            "description": "Dette er en simpel app, der giver dig mulighed for at gennemse dine GitHub-repositorier, der har markdown-filer, og se dem. Den er bygget med Next.js og bruger GitHub API'en til at hente data.",
+            "image": "/images/projects/github-markdown-notes-app.png",
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": "https://github.com/danielz1337/github-markdown-notes-app"
+                },
+                {
+                    "title": "Besøg",
+                    "url": "https://github-markdown-notes-app.danielz.dev/"
+                }
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS",
+                "Vercel",
+                "NextAuth.js",
+                "Redis"
+            ],
+            "icons": [
+                {
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
+                },
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                },
+                {
+                    "icon": <SiGithub size={ICON_SIZE}/>,
+                    "title": "GitHub API"
+                }
+            ]
+        },
+        {
+            "title": "Simpel Spil Singleplayer og Multiplayer App",
+            "description": "Dette er en simpel app, der giver dig mulighed for at spille spil med andre personer. Den er bygget med Next.js og bruger Socket.IO til multiplayer-funktionaliteten.",
+            "image": "/images/projects/simple-games-singleplayer-and-multiplayer-app.png",
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": "https://github.com/danielz1337/simple-games-singleplayer-and-multiplayer-app"
+                },
+                {
+                    "title": "Besøg",
+                    "url": "https://simple-games-singleplayer-and-multiplayer-app.danielz.dev/"
+                }
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS",
+                "Socket.IO",
+                "Vercel",
+                "NextAuth.js"
+            ],
+            "icons": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiSocketdotio size={ICON_SIZE}/>,
+                    "title": "Socket.IO"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                }
+            ]
+        }
     ]
 }
 
