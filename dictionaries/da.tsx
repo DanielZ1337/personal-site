@@ -97,6 +97,10 @@ export default {
         "projectsDescription4": "Jeg har også arbejdet med C++ og har en god forståelse for det. Dette har været i forbindelse med gymnasiet, hvor jeg tog HTX (Matematik A - Programmering B).",
         "technologiesused": "Teknologier brugt",
     },
+    "youtube": {
+        "title": "YouTube",
+        "description": "Her er nogle af mine YouTube-videoer"
+    },
     "skills": [
         {
             "title": "React",

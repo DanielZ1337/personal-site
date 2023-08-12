@@ -98,6 +98,10 @@ export default {
         "projectsDescription4": "I have also worked with C++ and have a good understanding of it. This was in connection with high school, where I took the Higher Technical Examination (HTX) (Mathematics A - Programming B).",
         "technologiesused": "Technologies used",
     },
+    "youtube": {
+        "title": "YouTube",
+        "description": "Here are some of my YouTube videos",
+    },
     "skills": [
         {
             "title": "React",
