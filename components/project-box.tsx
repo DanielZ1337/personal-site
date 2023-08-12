@@ -52,7 +52,8 @@ export default async function ProjectBox({
             <div className="flex flex-col gap-4 h-full justify-between">
                 <div>
                     <Link href={links[1].url}
-                          className="text-2xl font-bold mb-2 hover:underline">
+                          className="text-2xl font-bold mb-2 hover:underline" target="_blank"
+                          rel="noreferrer">
                         {title}
                         <TbExternalLink
                             className={"ml-2 mb-2 inline-block flex-shrink-0 flex-grow-0 text-primary"}/>

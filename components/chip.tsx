@@ -18,8 +18,8 @@ export default function Chip({
         role="button"
         tabIndex={0}
         target="_blank"
-        href={link!}
         rel="noreferrer"
+        href={link!}
     >
 		<span className={"group-hover:text-primary flex items-center justify-center gap-1.5 whitespace-nowrap"}>
 			{children}

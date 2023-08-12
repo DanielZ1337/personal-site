@@ -15,8 +15,6 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
     const dict = await getDictionary(lang)
     const shuffle = (arr: typeof dict.skills) => [...arr].sort(() => Math.random() - 0.5);
     const skills = shuffle(dict.skills)
-    console.log(dict.projects[0])
-
 
     return (
         <div className={"flex-1 flex-col flex text-center -mt-16"}>
@@ -100,7 +98,8 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                     </a>
                     <p className="text-xl mt-6 mb-5 text-muted-foreground">
                         {dict.text.resume}
-                        <Link href="/resume.pdf" className="text-blue-500 underline">
+                        <Link href="/resume.pdf" className="text-blue-500 underline" target="_blank"
+                              rel="noreferrer">
                             Your Resume
                         </Link>
                     </p>

@@ -9,7 +9,8 @@ import type {Dictionary} from '@/dictionaries/utils/dictionary-type';
 export default function Welcome({dict}: { dict: Dictionary }) {
     return (
         <div className={"h-[100dvh] z-10"}>
-            <div className={"flex-1 flex-col flex items-center h-full my-40 bg-gradient-to-b from-background from-50% to-100% to-neutral-200 dark:to-black"}>
+            <div
+                className={"flex-1 flex-col flex items-center h-full my-40 bg-gradient-to-b from-background from-50% to-100% to-neutral-200 dark:to-black"}>
                 <div>
                     <div className={"relative w-96 h-96"}>
                         <InViewWrapper
@@ -39,7 +40,12 @@ export default function Welcome({dict}: { dict: Dictionary }) {
                         <p>
                             {dict.text.hello}
                             <Link href={siteConfig.links.linkedin}
-                                  className={"text-primary underline"}>{siteConfig.creator}</Link>
+                                  className={"text-primary underline"}
+                                  target="_blank"
+                                  rel="noreferrer"
+                            >
+                                {siteConfig.creator}
+                            </Link>
                             !
                         </p>
                     </InViewWrapper>
