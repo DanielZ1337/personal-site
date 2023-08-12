@@ -5,6 +5,7 @@ import InViewWrapper from "@/components/in-view-wrapper";
 import Welcome from "@/components/welcome";
 import Link from "next/link";
 import ProjectBox from "@/components/project-box";
+import React from "react";
 
 export async function generateStaticParams() {
     return siteConfig.langs.map(lang => ({lang}))
@@ -69,15 +70,25 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                     </div>
                 </InViewWrapper>
             </div>
-            <div id={dict.navbar.links[0].projects.id} className={"bg-background min-h-screen max-w-[60vw]"}>
-                <div className={"mt-40"}>
-                    <h1 className={"text-5xl font-bold"}>{dict.text.projects}</h1>
-                    {dict.projects.map((project, index) => (
-                        <ProjectBox key={project.title} title={project.title} description={project.description}
-                                    image={project.image} links={project.links}
-                                    technologies={project.technologies} icons={project.icons} lang={lang}/>
-                    ))}
-
+            <div id={dict.navbar.links[0].projects.id} className={"bg-background min-h-screen relative"}>
+                <div className={"mt-40 max-w-[70vw] mx-auto"}>
+                    <h1 className={"text-5xl font-bold mb-10"}>{dict.text.projects}</h1>
+                    <h2 className={"text-2xl font-bold mb-10"}>{dict.text.projectssubtitle}</h2>
+                    <div
+                        className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4 mb-10 bg-neutral-200 dark:bg-black rounded-xl py-6 px-12"}>
+                        {dict.projects.map((project, index) => (
+                            <InViewWrapper key={project.title}
+                                           initial={{opacity: 0}}
+                                           whenInView={{opacity: 1}}
+                                           whenNotInView={{opacity: 0}}
+                                           transition={{duration: 0.5, delay: index * 0.1}}
+                            >
+                                <ProjectBox title={project.title} description={project.description}
+                                            image={project.image}
+                                            technologies={project.technologies} links={project.links}/>
+                            </InViewWrapper>
+                        ))}
+                    </div>
                 </div>
             </div>
 

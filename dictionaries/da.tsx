@@ -1,14 +1,17 @@
 import {
     SiBootstrap,
     SiCplusplus,
-    SiGit, SiGithub,
+    SiGit,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
     SiPostgresql,
     SiReact,
-    SiRedis, SiSocketdotio, SiTailwindcss,
-    SiTypescript, SiVercel
+    SiRedis,
+    SiSocketdotio,
+    SiTailwindcss,
+    SiTypescript,
+    SiVercel
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
 
@@ -86,9 +89,11 @@ export default {
         "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
         "projects": "Projekter",
+        "projectssubtitle": "Her er nogle af de projekter, jeg har arbejdet på.",
         "projectsDescription": "Går lige nu på 3. semester på SDU, hvor jeg læser til softwareingeniør. Her har jeg arbejdet mest med PostgreSQL og Java.",
         "projectsDescription2": "Jeg har arbejdet på et par projekter, både alene og sammen med andre. Så har jeg også arbejdet med frontend og backend, samt med både relationelle og ikke-relationelle databaser.",
         "projectsDescription3": "Derefter har jeg også arbejdet med Next.js og React, hvor Next.js har været min primære erfaring med React. Dette har været i JavaScript og TypeScript (bedst).",
+        "projectsDescription4": "Jeg har også arbejdet med C++ og har en god forståelse for det. Dette har været i forbindelse med gymnasiet, hvor jeg tog HTX (Matematik A - Programmering B).",
         "technologiesused": "Teknologier brugt",
     },
     "skills": [
@@ -148,7 +153,7 @@ export default {
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/danielz1337/personal-website"
+                    "url": "https://github.com/DanielZ1337/personal-site"
                 },
                 {
                     "title": "Besøg",
@@ -156,13 +161,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Vercel"
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -200,13 +198,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Vercel"
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -227,10 +218,6 @@ export default {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
                 },
-                {
-                    "icon": <SiGithub size={ICON_SIZE}/>,
-                    "title": "GitHub API"
-                }
             ]
         },
         {
@@ -248,14 +235,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Bootstrap",
-                "Vercel",
-                "PostgreSQL"
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -289,27 +268,14 @@ export default {
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/danielz1337/github-markdown-notes-app"
+                    "url": "https://github.com/DanielZ1337/git-markdown-notes-reader"
                 },
                 {
                     "title": "Besøg",
-                    "url": "https://github-markdown-notes-app.danielz.dev/"
-                }
+                    "url": "https://md-reader.danielz.dev/"
+                },
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Vercel",
-                "NextAuth.js",
-                "Redis"
-            ],
-            "icons": [
-                {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
-                    "title": "Redis"
-                },
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -331,14 +297,14 @@ export default {
                     "title": "Vercel"
                 },
                 {
-                    "icon": <SiGithub size={ICON_SIZE}/>,
-                    "title": "GitHub API"
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
                 }
-            ]
+            ],
         },
         {
             "title": "Simpel Spil Singleplayer og Multiplayer App",
-            "description": "Dette er en simpel app, der giver dig mulighed for at spille spil med andre personer. Den er bygget med Next.js og bruger Socket.IO til multiplayer-funktionaliteten.",
+            "description": "Dette er en simpel app, der giver dig mulighed for at spille spil med andre personer. Den er bygget med Next.js og bruger Socket.IO (med Express backend) til multiplayer-funktionaliteten.",
             "image": "/images/projects/simple-games-singleplayer-and-multiplayer-app.png",
             "links": [
                 {
@@ -351,15 +317,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Socket.IO",
-                "Vercel",
-                "NextAuth.js"
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -384,7 +341,7 @@ export default {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
                 }
-            ]
+            ],
         }
     ]
 }

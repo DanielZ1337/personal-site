@@ -1,14 +1,18 @@
 import {
     SiBootstrap,
     SiCplusplus,
-    SiGit, SiGithub,
+    SiGit,
+    SiGithub,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
     SiPostgresql,
     SiReact,
-    SiRedis, SiSocketdotio, SiTailwindcss,
-    SiTypescript, SiVercel
+    SiRedis,
+    SiSocketdotio,
+    SiTailwindcss,
+    SiTypescript,
+    SiVercel
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
 
@@ -86,9 +90,11 @@ export default {
         "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
         "projects": "Projects",
+        "projectssubtitle": "Here are some of the projects I have worked on.",
         "projectsDescription": "I am currently in my 3rd semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
         "projectsDescription2": "I have been involved in several projects, both individually and collaboratively. I have experience with both frontend and backend development, as well as working with relational and non-relational databases.",
         "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript (best).",
+        "projectsDescription4": "I have also worked with C++ and have a good understanding of it. This was in connection with high school, where I took the Higher Technical Examination (HTX) (Mathematics A - Programming B).",
         "technologiesused": "Technologies used",
     },
     "skills": [
@@ -148,7 +154,7 @@ export default {
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/danielz1337/personal-website"
+                    "url": "https://github.com/DanielZ1337/personal-site"
                 },
                 {
                     "title": "Visit",
@@ -156,13 +162,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Vercel"
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -182,7 +181,7 @@ export default {
                 {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
-                },
+                }
             ]
         },
         {
@@ -200,13 +199,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Vercel"
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -231,7 +223,7 @@ export default {
                     "icon": <SiGithub size={ICON_SIZE}/>,
                     "title": "GitHub API"
                 },
-            ]
+            ],
         },
         {
             "title": "E-Commerce",
@@ -248,14 +240,6 @@ export default {
                 }
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Bootstrap",
-                "Vercel",
-                "PostgreSQL",
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -280,7 +264,7 @@ export default {
                     "icon": <SiPostgresql size={ICON_SIZE}/>,
                     "title": "PostgreSQL"
                 }
-            ]
+            ],
         },
         {
             "title": "GitHub Markdown Notes App",
@@ -289,23 +273,14 @@ export default {
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/danielz1337/github-markdown-notes-app"
+                    "url": "https://github.com/DanielZ1337/git-markdown-notes-reader"
                 },
                 {
                     "title": "Visit",
-                    "url": "https://github-markdown-notes-app.danielz.dev/"
+                    "url": "https://md-reader.danielz.dev/"
                 },
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Vercel",
-                "NextAuth.js",
-                "Redis",
-            ],
-            "icons": [
                 {
                     "icon": <SiRedis size={ICON_SIZE}/>,
                     "title": "Redis"
@@ -334,11 +309,11 @@ export default {
                     "icon": <SiGithub size={ICON_SIZE}/>,
                     "title": "GitHub API"
                 },
-            ]
+            ],
         },
         {
             "title": "Simple Games Singleplayer and Multiplayer App",
-            "description": "This is a simple app that allows you to play games with other people. It's built with Next.js and uses Socket.IO for the multiplayer functionality.",
+            "description": "This is a simple app that allows you to play games with other people. It's built with Next.js and uses Socket.IO (with Express backend) for the multiplayer functionality.",
             "image": "/images/projects/simple-games-singleplayer-and-multiplayer-app.png",
             "links": [
                 {
@@ -351,15 +326,6 @@ export default {
                 },
             ],
             "technologies": [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "TailwindCSS",
-                "Socket.IO",
-                "Vercel",
-                "NextAuth.js",
-            ],
-            "icons": [
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -383,7 +349,7 @@ export default {
                 {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
-                },
+                }
             ]
         }
     ]

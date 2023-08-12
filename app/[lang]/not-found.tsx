@@ -1,7 +1,7 @@
 'use client'
 
 import {useEffect} from "react";
-import {useParams, usePathname, useRouter} from "next/navigation";
+import {useParams, useRouter} from "next/navigation";
 import {useToast} from "@/components/ui/use-toast";
 import {getDictionary} from "@/dictionaries/utils/dictionaries";
 import {useQuery} from "@tanstack/react-query";
@@ -48,7 +48,8 @@ export default function NotFound() {
                     />
 
                     <span className="relative block px-8 py-3 bg-foreground dark:bg-black/90 border border-primary">
-                        <Link href={`/${lang}`} className={"group-active:shadow-2xl group-active:shadow-primary"}>{dict?.errors.NotFound.page.message}</Link>
+                        <Link href={`/${lang}`}
+                              className={"group-active:shadow-2xl group-active:shadow-primary"}>{dict?.errors.NotFound.page.message}</Link>
                     </span>
                 </div>
             </button>

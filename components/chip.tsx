@@ -1,17 +1,20 @@
 import {ReactNode} from "react";
 import Link from "next/link";
+import {cn} from "@/lib/utils";
 
 export default function Chip({
                                  children,
                                  prompt,
                                  link,
+    className
                              }: {
     readonly children: ReactNode
     readonly prompt?: ReactNode
     readonly link?: string
+    readonly className?: string
 }) {
     return <Link
-        className={"group rounded-full w-fit transition-all active:shadow-sm shadow-[0_0px_30px_-15px_hsl(var(--foreground))] active:bg-background border border-muted-foreground/10 hover:border-primary px-4 bg-secondary flex items-center justify-center h-8 whitespace-no-wrap duration-100 cursor-pointer select-none m-0"}
+        className={cn("group rounded-full w-fit transition-all active:shadow-sm shadow-[0_0px_30px_-15px_hsl(var(--foreground))] active:bg-background border border-muted-foreground/10 hover:border-primary px-4 bg-secondary flex items-center justify-center h-8 whitespace-no-wrap duration-100 cursor-pointer select-none m-0", className)}
         role="button"
         tabIndex={0}
         target="_blank"
