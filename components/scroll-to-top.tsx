@@ -7,6 +7,10 @@ export default function ScrollToTop() {
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
+        setScrollY(window.scrollY);
+    }, []);
+
+    useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
