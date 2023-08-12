@@ -14,6 +14,7 @@ import {
     SiVercel
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
+import {projects} from "@/lib/projects";
 
 const ICON_SIZE = "2.5rem";
 
@@ -149,15 +150,15 @@ export default {
         {
             "title": "Personlig Hjemmeside",
             "description": "Denne hjemmeside er min personlige hjemmeside, hvor jeg fremviser mine projekter og færdigheder.",
-            "image": "/images/projects/personal-website.png",
+            "image": projects["personal-website"].image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/DanielZ1337/personal-site"
+                    "url": projects["personal-website"].github
                 },
                 {
                     "title": "Besøg",
-                    "url": "https://danielz.dev/"
+                    "url": projects["personal-website"].production
                 }
             ],
             "technologies": [
@@ -186,15 +187,15 @@ export default {
         {
             "title": "ValorVault",
             "description": "ValorVault er en hjemmeside, der giver dig mulighed for at følge dine Valorant-statistikker. Den er bygget med Next.js og bruger Valorant API'en til at hente data.",
-            "image": "/images/projects/valorvault.png",
+            "image": projects.valorvault.image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/danielz1337/valorvault"
+                    "url": projects.valorvault.github
                 },
                 {
                     "title": "Besøg",
-                    "url": "https://valorvault.danielz.dev/"
+                    "url": projects.valorvault.production
                 }
             ],
             "technologies": [
@@ -223,15 +224,15 @@ export default {
         {
             "title": "E-Handel",
             "description": "Dette er en e-handels hjemmeside, bygget med Next.js og Commerce.js. Det er en simpel hjemmeside, der giver dig mulighed for at tilføje produkter til din indkøbskurv og foretage betaling.",
-            "image": "/images/projects/e-commerce.png",
+            "image": projects["e-commerce"].image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/danielz1337/e-commerce"
+                    "url": projects["e-commerce"].github
                 },
                 {
                     "title": "Besøg",
-                    "url": "https://e-commerce.danielz.dev/"
+                    "url": projects["e-commerce"].production
                 }
             ],
             "technologies": [
@@ -264,16 +265,16 @@ export default {
         {
             "title": "GitHub Markdown Notes App",
             "description": "Dette er en simpel app, der giver dig mulighed for at gennemse dine GitHub-repositorier, der har markdown-filer, og se dem. Den er bygget med Next.js og bruger GitHub API'en til at hente data.",
-            "image": "/images/projects/github-markdown-notes-app.png",
+            "image": projects["github-markdown-reader"].image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/DanielZ1337/git-markdown-notes-reader"
+                    "url": projects["github-markdown-reader"].github
                 },
                 {
                     "title": "Besøg",
-                    "url": "https://md-reader.danielz.dev/"
-                },
+                    "url": projects["github-markdown-reader"].production
+                }
             ],
             "technologies": [
                 {
@@ -305,15 +306,15 @@ export default {
         {
             "title": "Simpel Spil Singleplayer og Multiplayer App",
             "description": "Dette er en simpel app, der giver dig mulighed for at spille spil med andre personer. Den er bygget med Next.js og bruger Socket.IO (med Express backend) til multiplayer-funktionaliteten.",
-            "image": "/images/projects/simple-games-singleplayer-and-multiplayer-app.png",
+            "image": projects["simple-games-singleplayer-and-multiplayer-app"].image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": "https://github.com/danielz1337/simple-games-singleplayer-and-multiplayer-app"
+                    "url": projects["simple-games-singleplayer-and-multiplayer-app"].github
                 },
                 {
                     "title": "Besøg",
-                    "url": "https://simple-games-singleplayer-and-multiplayer-app.danielz.dev/"
+                    "url": projects["simple-games-singleplayer-and-multiplayer-app"].production
                 }
             ],
             "technologies": [

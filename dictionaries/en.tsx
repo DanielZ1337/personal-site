@@ -15,6 +15,7 @@ import {
     SiVercel
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
+import {projects} from "@/lib/projects";
 
 const ICON_SIZE = "2.5rem";
 
@@ -150,15 +151,15 @@ export default {
         {
             "title": "Personal Website",
             "description": "This website is my personal website, where I showcase my projects and skills.",
-            "image": "/images/projects/personal-website.png",
+            "image": projects["personal-website"].image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/DanielZ1337/personal-site"
+                    "url": projects["personal-website"].github
                 },
                 {
                     "title": "Visit",
-                    "url": "https://danielz.dev/"
+                    "url": projects["personal-website"].production
                 }
             ],
             "technologies": [
@@ -187,15 +188,15 @@ export default {
         {
             "title": "ValorVault",
             "description": "ValorVault is a website that allows you to track your Valorant stats. It's built with Next.js and uses the Valorant API to fetch data.",
-            "image": "/images/projects/valorvault.png",
+            "image": projects.valorvault.image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/danielz1337/valorvault"
+                    "url": projects["valorvault"].github
                 },
                 {
                     "title": "Visit",
-                    "url": "https://valorvault.danielz.dev/"
+                    "url": projects["valorvault"].production
                 }
             ],
             "technologies": [
@@ -228,15 +229,15 @@ export default {
         {
             "title": "E-Commerce",
             "description": "This is an e-commerce website built with Next.js and Commerce.js. It's a simple website that allows you to add products to your cart and checkout.",
-            "image": "/images/projects/e-commerce.png",
+            "image": projects["e-commerce"].image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/danielz1337/e-commerce"
+                    "url": projects["e-commerce"].github
                 },
                 {
                     "title": "Visit",
-                    "url": "https://e-commerce.danielz.dev/"
+                    "url": projects["e-commerce"].production
                 }
             ],
             "technologies": [
@@ -269,16 +270,16 @@ export default {
         {
             "title": "GitHub Markdown Notes App",
             "description": "This is a simple app that allows you to browse your GitHub repositories that have markdown files and view them. It's built with Next.js and uses the GitHub API to fetch data.",
-            "image": "/images/projects/github-markdown-notes-app.png",
+            "image": projects["github-markdown-reader"].image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/DanielZ1337/git-markdown-notes-reader"
+                    "url": projects["github-markdown-reader"].github
                 },
                 {
                     "title": "Visit",
-                    "url": "https://md-reader.danielz.dev/"
-                },
+                    "url": projects["github-markdown-reader"].production
+                }
             ],
             "technologies": [
                 {
@@ -314,16 +315,16 @@ export default {
         {
             "title": "Simple Games Singleplayer and Multiplayer App",
             "description": "This is a simple app that allows you to play games with other people. It's built with Next.js and uses Socket.IO (with Express backend) for the multiplayer functionality.",
-            "image": "/images/projects/simple-games-singleplayer-and-multiplayer-app.png",
+            "image": projects["simple-games-singleplayer-and-multiplayer-app"].image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": "https://github.com/danielz1337/simple-games-singleplayer-and-multiplayer-app"
+                    "url": projects["simple-games-singleplayer-and-multiplayer-app"].github
                 },
                 {
                     "title": "Visit",
-                    "url": "https://simple-games-singleplayer-and-multiplayer-app.danielz.dev/"
-                },
+                    "url": projects["simple-games-singleplayer-and-multiplayer-app"].production
+                }
             ],
             "technologies": [
                 {

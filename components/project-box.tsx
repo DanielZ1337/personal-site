@@ -45,6 +45,8 @@ export default async function ProjectBox({
                         height: '100%',
                     }}
                     className={"object-contain mx-auto"}
+                    placeholder={"blur"}
+                    blurDataURL={image}
                 />
             </div>
             <div className="flex flex-col gap-4 h-full justify-between">
