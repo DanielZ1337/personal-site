@@ -30,18 +30,27 @@ export default {
         "links": [
             {
                 "home": {
+                    "id": "hjem",
                     "anchor": "/da",
                     "title": "Hjem"
                 },
-                "about": {
-                    "anchor": "#om",
-                    "title": "Om"
+                "skills": {
+                    "id": "færdigheder",
+                    "anchor": "#færdigheder",
+                    "title": "Færdigheder"
+                },
+                "projects": {
+                    "id": "projekter",
+                    "anchor": "#projekter",
+                    "title": "Projekter"
                 },
                 "contact": {
+                    "id": "kontakt",
                     "anchor": "#kontakt",
                     "title": "Kontakt"
                 },
                 "resume": {
+                    "id": "cv",
                     "anchor": "/resume.pdf",
                     "title": "CV"
                 }
@@ -72,13 +81,13 @@ export default {
         "skillsDescription": "Her er nogle af de færdigheder, jeg har opnået gennem min uddannelse og projekter.",
         "skillsDescription2": "Disse er de erfaringer, jeg har fået gennem projekter på gymnasiet, universitetet og fritidsprojekter.",
         "hello": `Hej, mit navn er `,
-        "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 2. semester.",
+        "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 3. semester.",
         "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
         "projects": "Projekter",
         "projectsDescription": "Går lige nu på 3. semester på SDU, hvor jeg læser til softwareingeniør. Her har jeg arbejdet mest med PostgreSQL og Java.",
         "projectsDescription2": "Jeg har arbejdet på et par projekter, både alene og sammen med andre. Så har jeg også arbejdet med frontend og backend, samt med både relationelle og ikke-relationelle databaser.",
-        "projectsDescription3": "Derefter har jeg også arbejdet med Next.js og React, hvor Next.js har været min primære erfaring med React. Dette har været i JavaScript og TypeScript.",
+        "projectsDescription3": "Derefter har jeg også arbejdet med Next.js og React, hvor Next.js har været min primære erfaring med React. Dette har været i JavaScript og TypeScript (bedst).",
     },
     "skills": [
         {

@@ -12,7 +12,7 @@ export default function Skills({skills}: { skills: Dictionary["skills"] }) {
     return (
         <div className={"flex items-center justify-center"}>
             <ul ref={ref}
-                className={"w-[350px] md:w-[500px] items-center justify-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"}>
+                className={"w-[350px] md:w-[500px] items-center justify-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8"}>
                 {skills.map((skill, index) => (
                     <m.li
                         key={index}

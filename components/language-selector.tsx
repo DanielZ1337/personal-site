@@ -14,7 +14,7 @@ export default function LanguageSelector() {
     const [langName, setLangName] = useState<string | undefined>(undefined);
     const router = useRouter()
     useEffect(() => {
-        const lang = window.location.href.split("/")[3]
+        const lang = window.location.href.split("/")[3].split('#')[0]
         if (lang) {
             setLangCode(lang)
         }

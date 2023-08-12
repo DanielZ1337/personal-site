@@ -30,18 +30,27 @@ export default {
         "links": [
             {
                 "home": {
+                    "id": "home",
                     "anchor": "/en",
                     "title": "Home"
                 },
-                "about": {
-                    "anchor": "#about",
-                    "title": "About"
+                "skills": {
+                    "id": "skills",
+                    "anchor": "#skills",
+                    "title": "Skills"
+                },
+                "projects": {
+                    "id": "projects",
+                    "anchor": "#projects",
+                    "title": "Projects"
                 },
                 "contact": {
+                    "id": "contact",
                     "anchor": "#contact",
                     "title": "Contact"
                 },
                 "resume": {
+                    "id": "resume",
                     "anchor": "/resume.pdf",
                     "title": "CV"
                 }
@@ -72,13 +81,13 @@ export default {
         "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",
         "skillsDescription2": "These are the experiences I have gained through projects in high school, university, and personal projects.",
         "hello": "Hello, my name is ",
-        "about": "I am a 21-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 2nd semester.",
+        "about": "I am a 21-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 3rd semester.",
         "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
         "projects": "Projects",
         "projectsDescription": "I am currently in my 3rd semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
         "projectsDescription2": "I have been involved in several projects, both individually and collaboratively. I have experience with both frontend and backend development, as well as working with relational and non-relational databases.",
-        "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript.",
+        "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript (best).",
     },
     "skills": [
         {
