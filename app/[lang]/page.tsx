@@ -69,7 +69,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                 </InViewWrapper>
             </div>
             <div id={dict.navbar.links[0].projects.id} className={"bg-background min-h-screen relative"}>
-                <div className={"mt-40 max-w-[90vw] sm:max-w-[70vw] mx-auto"}>
+                <div className={"mt-40 max-w-[90vw] lg:max-w-[70vw] mx-auto"}>
                     <h1 className={"text-5xl font-bold mb-10"}>{dict.text.projects}</h1>
                     <h2 className={"text-2xl font-bold mb-10"}>{dict.text.projectssubtitle}</h2>
                     <div
