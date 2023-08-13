@@ -29,7 +29,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                     whenNotInView={{opacity: 0, y: 50}}
                     transition={{duration: 0.5}}
                 >
-                    <div className={"mt-40 flex-1 flex-col flex items-center h-full"}>
+                    <div className={"mt-40 flex-1 flex-col flex items-center h-full md:mx-0 mx-10"}>
                         <h1 className={"text-5xl font-bold"}>{dict.text.skills}</h1>
                         <p className={"text-2xl mt-6 mb-10 dark:text-muted-foreground"}>{dict.text.skillsDescription2}</p>
                         <Skills skills={skills}/>
@@ -61,7 +61,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                                     whenNotInView={{opacity: 0, x: 50}}
                                     transition={{duration: 0.5}}
                                 >
-                                    <p className="text-xl mb-5 dark:text-muted-foreground">{dict.text.projectsDescription3}</p>
+                                    <p className="text-xl mb-5 md:mt-0 mt-16 dark:text-muted-foreground">{dict.text.projectsDescription3}</p>
                                 </InViewWrapper>
                             </div>
                         </InViewWrapper>
@@ -73,7 +73,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
                     <h1 className={"text-5xl font-bold mb-10"}>{dict.text.projects}</h1>
                     <h2 className={"text-2xl font-bold mb-10"}>{dict.text.projectssubtitle}</h2>
                     <div
-                        className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4 mb-10 bg-neutral-200 dark:bg-black rounded-xl py-6 px-12"}>
+                        className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4 mb-10 bg-neutral-200 dark:bg-black rounded-xl py-6 px-6 md:px-12"}>
                         {dict.projects.map((project, index) => (
                             <InViewWrapper key={project.title}
                                            initial={{opacity: 0}}

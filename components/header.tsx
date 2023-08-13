@@ -23,7 +23,7 @@ export default async function Header({lang}: { lang: string }) {
 
     return (
         <HeaderScroll>
-            <div className="flex items-center justify-between p-4 h-16 w-full" style={{
+            <div className="items-center justify-between p-4 h-16 w-full hidden md:flex" style={{
                 width: "min(calc(100vw - 20px), 500px + 40vw)"
             }}>
                 <Link href={dict.navbar.links[0].home.anchor} className={"z-10"}>
@@ -38,6 +38,15 @@ export default async function Header({lang}: { lang: string }) {
                         </li>
                     ))}
                 </ul>
+                <div className={"flex items-center gap-2"}>
+                    <LanguageSelector/>
+                    <ThemeSwitcher/>
+                </div>
+            </div>
+            <div className="flex items-center justify-between p-4 h-16 w-full md:hidden">
+                <Link href={dict.navbar.links[0].home.anchor} className={"z-10"}>
+                    <Image src={logo} alt="Logo" className="w-8 h-8"/>
+                </Link>
                 <div className={"flex items-center gap-2"}>
                     <LanguageSelector/>
                     <ThemeSwitcher/>

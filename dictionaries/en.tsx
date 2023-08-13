@@ -82,6 +82,7 @@ export default {
     },
     "text": {
         "socials": "Social Media",
+        "navigation": "Navigation",
         "visit": "Visit",
         "skills": "Skills",
         "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",

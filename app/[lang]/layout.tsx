@@ -10,6 +10,7 @@ import {Toaster} from "@/components/ui/toaster";
 import ScrollToTop from "@/components/scroll-to-top";
 import SideNavSocials from "@/components/sidenav-socials";
 import {Suspense} from "react";
+import MobileNavSocials from "@/components/mobile-nav-socials";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -139,6 +140,7 @@ export default function RootLayout({
                 <Toaster/>
                 <ScrollToTop/>
                 <SideNavSocials/>
+                <MobileNavSocials/>
             </Providers>
         </Suspense>
         </body>
