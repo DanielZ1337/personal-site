@@ -79,24 +79,29 @@ export default function MobileNavSocials() {
                                 {tab === "Nav" ? (
                                     <>
                                         {Object.entries(dict.navbar.links[0]).map(([key, value]) => (
-                                            <Link href={value.anchor} key={key} className={LinkVariant}>
+                                            <Link href={value.anchor} key={key} className={LinkVariant}
+                                                  target={shouldOpenInNewTab(value.anchor) ? "_blank" : '_self'}
+                                                  rel={shouldOpenInNewTab(value.anchor) ? "noopener noreferrer" : undefined}
+                                            >
                                                 {value.title}
                                             </Link>
                                         ))}
-                                        <p className={LinkVariant} onClick={() => setTab("Socials")}>{dict.text.socials} <GoArrowRight/></p>
+                                        <p className={LinkVariant} onClick={() => setTab("Socials")}>{dict.text.socials}
+                                            <GoArrowRight/></p>
                                     </>) : (
                                     <>
                                         {Object.entries(socials).map(([key, value]) => (
                                             <Link href={value.href} key={key}
                                                   className={LinkVariant}
-                                                  target={shouldOpenInNewTab(value.href) ? "_blank" : '_self'}
-                                                  rel={shouldOpenInNewTab(value.href) ? "noopener noreferrer" : undefined}
+                                                  target="_blank"
+                                                  rel="noreferrer"
                                             >
                                                 {value.icon}
                                                 <span>{key}</span>
                                             </Link>
                                         ))}
-                                        <p className={LinkVariant} onClick={() => setTab("Nav")}><GoArrowLeft/>{dict.text.navigation}</p>
+                                        <p className={LinkVariant} onClick={() => setTab("Nav")}>
+                                            <GoArrowLeft/>{dict.text.navigation}</p>
                                     </>
                                 )}
                             </div>
