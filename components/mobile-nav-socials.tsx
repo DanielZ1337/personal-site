@@ -11,6 +11,7 @@ import {MdKeyboardDoubleArrowUp} from "react-icons/md";
 import {useState} from "react";
 import {m} from "framer-motion";
 import {GoArrowLeft, GoArrowRight} from "react-icons/go";
+import {shouldOpenInNewTab} from "@/lib/utils";
 
 
 type Tabs = "Nav" | "Socials"
@@ -88,8 +89,8 @@ export default function MobileNavSocials() {
                                         {Object.entries(socials).map(([key, value]) => (
                                             <Link href={value.href} key={key}
                                                   className={LinkVariant}
-                                                  target="_blank"
-                                                  rel="noreferrer"
+                                                  target={shouldOpenInNewTab(value.href) ? "_blank" : '_self'}
+                                                  rel={shouldOpenInNewTab(value.href) ? "noopener noreferrer" : undefined}
                                             >
                                                 {value.icon}
                                                 <span>{key}</span>

@@ -12,6 +12,7 @@ import {
     NavigationMenuItem, NavigationMenuLink,
     NavigationMenuList, NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
+import {shouldOpenInNewTab} from "@/lib/utils";
 
 export default async function Header({lang}: { lang: string }) {
     const dict = await getDictionary(lang)
@@ -59,11 +60,6 @@ export default async function Header({lang}: { lang: string }) {
 interface NavLinkProps {
     readonly href: string
     readonly children: ReactNode
-}
-
-function shouldOpenInNewTab(href: string) {
-    return href.endsWith('.pdf');
-
 }
 
 function NavLink({href, children}: NavLinkProps) {
