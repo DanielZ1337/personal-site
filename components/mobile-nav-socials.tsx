@@ -57,7 +57,7 @@ export default function MobileNavSocials() {
     const LinkVariant = 'flex items-center gap-2 text-xl bg-primary/10 rounded-full px-4 py-2 active:bg-primary/20 hover:bg-primary/20 transition-colors duration-200 ease-in-out w-full active:text-current text-primary'
 
     return (
-        <div className={"block md:hidden"}>
+        <div className={"block lg:hidden"}>
             <Drawer.Root open={isOpen} onOpenChange={setIsOpen} shouldScaleBackground>
                 <Drawer.Trigger asChild>
                     <m.div
@@ -65,14 +65,14 @@ export default function MobileNavSocials() {
                         animate={!isOpen ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
                         transition={{duration: 0.5}}
                         onClick={() => setIsOpen(!isOpen)}
-                        className={"fixed bottom-0 left-0 right-0 flex justify-center items-center mx-auto w-20 z-20 mb-10 bg-muted-foreground/50 rounded-full"}>
+                        className={"fixed bottom-0 left-0 right-0 flex justify-center items-center mx-auto w-20 z-50 mb-10 bg-muted-foreground/50 rounded-full"}>
                         <MdKeyboardDoubleArrowUp className={"w-10 h-10 text-primary"}/>
                     </m.div>
                 </Drawer.Trigger>
                 <Drawer.Portal>
-                    <Drawer.Overlay className="fixed inset-0 bg-black/40 z-20"/>
+                    <Drawer.Overlay className="fixed inset-0 bg-black/40 z-50"/>
                     <Drawer.Content
-                        className="bg-neutral-200 dark:bg-black flex flex-col rounded-t-[10px] h-fit mt-96 fixed bottom-0 left-0 right-0 z-20">
+                        className="bg-neutral-200 dark:bg-black flex flex-col rounded-t-[10px] h-fit mt-96 fixed bottom-0 left-0 right-0 z-50">
                         <div className="p-4 bg-neutral-200 dark:bg-black rounded-t-[10px] flex-1">
                             <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8"/>
                             <div className={"flex flex-col gap-2 justify-center items-center"}>
