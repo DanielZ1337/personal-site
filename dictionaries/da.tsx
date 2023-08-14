@@ -226,9 +226,9 @@ export default {
                 },
             ]
         },
-        {
+        /*{
             "title": "E-Handel",
-            "description": "Dette er en e-handels hjemmeside, bygget med Next.js og Commerce.js. Det er en simpel hjemmeside, der giver dig mulighed for at tilføje produkter til din indkøbskurv og foretage betaling.",
+            "description": "Dette er en e-handels hjemmeside, bygget med Next.js og PostgreSQL. Det er en simpel hjemmeside, der giver dig mulighed for at tilføje produkter til din indkøbskurv og foretage betaling.",
             "image": projects["e-commerce"].image,
             "links": [
                 {
@@ -266,7 +266,7 @@ export default {
                     "title": "PostgreSQL"
                 }
             ]
-        },
+        },*/
         {
             "title": "GitHub Markdown Notes App",
             "description": "Dette er en simpel app, der giver dig mulighed for at gennemse dine GitHub-repositorier, der har markdown-filer, og se dem. Den er bygget med Next.js og bruger GitHub API'en til at hente data.",
@@ -308,7 +308,7 @@ export default {
                 }
             ],
         },
-        {
+        /*{
             "title": "Simpel Spil Singleplayer og Multiplayer App",
             "description": "Dette er en simpel app, der giver dig mulighed for at spille spil med andre personer. Den er bygget med Next.js og bruger Socket.IO (med Express backend) til multiplayer-funktionaliteten.",
             "image": projects["simple-games-singleplayer-and-multiplayer-app"].image,
@@ -348,7 +348,7 @@ export default {
                     "title": "Vercel"
                 }
             ],
-        }
+        }*/
     ]
 }
 

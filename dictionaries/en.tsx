@@ -231,9 +231,9 @@ export default {
                 },
             ],
         },
-        {
+        /*{
             "title": "E-Commerce",
-            "description": "This is an e-commerce website built with Next.js and Commerce.js. It's a simple website that allows you to add products to your cart and checkout.",
+            "description": "This is an e-commerce website built with Next.js and PostgreSQL. It's a simple website that allows you to add products to your cart and checkout.",
             "image": projects["e-commerce"].image,
             "links": [
                 {
@@ -271,7 +271,7 @@ export default {
                     "title": "PostgreSQL"
                 }
             ],
-        },
+        },*/
         {
             "title": "GitHub Markdown Notes App",
             "description": "This is a simple app that allows you to browse your GitHub repositories that have markdown files and view them. It's built with Next.js and uses the GitHub API to fetch data.",
@@ -317,7 +317,7 @@ export default {
                 },
             ],
         },
-        {
+        /*{
             "title": "Simple Games Singleplayer and Multiplayer App",
             "description": "This is a simple app that allows you to play games with other people. It's built with Next.js and uses Socket.IO (with Express backend) for the multiplayer functionality.",
             "image": projects["simple-games-singleplayer-and-multiplayer-app"].image,
@@ -357,6 +357,6 @@ export default {
                     "title": "Vercel"
                 }
             ]
-        }
+        }*/
     ]
 }
