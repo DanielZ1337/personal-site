@@ -13,13 +13,17 @@ import {useParams} from "next/navigation";
 export default function ThemeSwitcher() {
     const {setTheme, theme} = useTheme()
     const [mounted, setMounted] = useState(false)
-    useEffect(() => {setMounted(true)}, []);
+    useEffect(() => setMounted(true), []);
 
     const {
         data,
         isLoading,
         error
     } = useDictionary(useParams().lang as string)
+
+    if (!mounted) {
+        return null
+    }
 
     if (isLoading || !data) {
         return (

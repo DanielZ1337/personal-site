@@ -91,7 +91,7 @@ export default {
         "socials": "Social Media",
         "navigation": "Navigation",
         "visit": "Visit",
-        "skills": "SkillsGrid",
+        "skills": "Skills",
         "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",
         "skillsDescription2": "These are the experiences I have gained through projects in high school, university, and personal projects.",
         "hello": "Hello, my name is ",
