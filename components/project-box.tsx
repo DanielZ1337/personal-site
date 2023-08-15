@@ -1,8 +1,6 @@
 import React from 'react';
-import InViewWrapper from "@/components/in-view-wrapper";
 import Image from "next/image";
 import Link from "next/link";
-import {HiMiniLink} from "react-icons/hi2";
 import {TbExternalLink} from "react-icons/tb";
 import Chip from "@/components/chip";
 import {SiGithub} from "react-icons/si";
@@ -21,6 +19,13 @@ interface ProjectBoxProps {
         readonly title: string;
         readonly icon: React.ReactElement;
     }[];
+    readonly extraDescription?: {
+        readonly title: string;
+        readonly credentials: {
+            readonly username: string;
+            readonly password: string;
+        };
+    };
 
 }
 
@@ -30,6 +35,7 @@ export default async function ProjectBox({
                                              image,
                                              links,
                                              technologies,
+                                             extraDescription
                                          }: ProjectBoxProps) {
 
     return (
@@ -60,6 +66,15 @@ export default async function ProjectBox({
                         <span className={"sr-only"}>{links[0].title}</span>
                     </Link>
                     <p className="text-lg mb-5">{description}</p>
+                    <small className="text-sm text-muted-foreground flex-col flex">
+                        {extraDescription && (
+                            <>
+                                <span className="font-bold">{extraDescription.title}</span>
+                                <span>{extraDescription.credentials.username}</span>
+                                <span>{extraDescription.credentials.password}</span>
+                            </>
+                        )}
+                    </small>
                 </div>
                 <div className="flex flex-wrap gap-2">
                     {technologies.map(technology => (

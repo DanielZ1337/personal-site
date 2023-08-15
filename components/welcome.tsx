@@ -12,7 +12,7 @@ export default function Welcome({dict}: { dict: Dictionary }) {
             <div
                 className={"flex-1 flex-col flex items-center h-full my-40 bg-gradient-to-b from-background from-50% to-100% to-neutral-200 dark:to-black"}>
                 <div>
-                    <div className={"relative md:w-96 md:h-96 w-64 h-64"}>
+                    <div className={"relative md:w-96 md:h-96 w-64 h-64 drop-shadow-xl"}>
                         <InViewWrapper
                             initial={{opacity: 0}}
                             whenInView={{opacity: 1}}
@@ -20,7 +20,7 @@ export default function Welcome({dict}: { dict: Dictionary }) {
                             transition={{duration: 0.5}}
                         >
                             <Image className={"rounded-full object-cover"} placeholder={"blur"} src={avatar}
-                                   alt={siteConfig.title} fill/>
+                                   alt={siteConfig.title} fill sizes={"100%"}/>
                             <div className={"absolute bottom-0 right-0 flex justify-center items-center"}>
                                 <Image src={logo} className={"absolute p-6 object-contain"} alt={siteConfig.title}
                                        width={200}

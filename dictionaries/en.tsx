@@ -1,5 +1,4 @@
 import {
-    SiBootstrap,
     SiCplusplus,
     SiGit,
     SiGithub,
@@ -9,7 +8,6 @@ import {
     SiPostgresql,
     SiReact,
     SiRedis,
-    SiSocketdotio,
     SiTailwindcss,
     SiTypescript,
     SiVercel
@@ -81,19 +79,29 @@ export default {
         "source": "Source code on"
     },
     "text": {
+        "email": "Email",
+        "name": "Name",
+        "message": "Message",
+        "contactform":{
+            "name": "Navn...",
+            "email":"Email...",
+            "message": "Write your message...",
+            "sendemail": "Send e-mail"
+        },
         "socials": "Social Media",
         "navigation": "Navigation",
         "visit": "Visit",
-        "skills": "Skills",
+        "skills": "SkillsGrid",
         "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",
         "skillsDescription2": "These are the experiences I have gained through projects in high school, university, and personal projects.",
         "hello": "Hello, my name is ",
         "about": "I am a 21-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 3rd semester.",
+        "contacttitle": "Contact me",
         "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
         "projects": "Projects",
         "projectssubtitle": "Here are some of the projects I have worked on.",
-        "projectsDescription": "I am currently in my 3rd semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
+        "projectsDescription": "I am currently on my 3rd semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
         "projectsDescription2": "I have been involved in several projects, both individually and collaboratively. I have experience with both frontend and backend development, as well as working with relational and non-relational databases.",
         "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript (best).",
         "projectsDescription4": "I have also worked with C++ and have a good understanding of it. This was in connection with high school, where I took the Higher Technical Examination (HTX) (Mathematics A - Programming B).",
@@ -191,20 +199,31 @@ export default {
             ]
         },
         {
-            "title": "ValorVault",
-            "description": "ValorVault is a website that allows you to track your Valorant stats. It's built with Next.js and uses the Valorant API to fetch data.",
-            "image": projects.valorvault.image,
+            "title": "GitHub Markdown Notes App",
+            "description": "This is a simple app that allows you to browse your GitHub repositories that have markdown files and view them. It's built with Next.js and uses the GitHub API to fetch data.",
+            "extraDescription": {
+                "title": "For testing use the following credentials:",
+                "credentials": {
+                    "username": "Username: testdanielz",
+                    "password": "Password: testdanielz123"
+                }
+            },
+            "image": projects["github-markdown-reader"].image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": projects["valorvault"].github
+                    "url": projects["github-markdown-reader"].github
                 },
                 {
                     "title": "Visit",
-                    "url": projects["valorvault"].production
+                    "url": projects["github-markdown-reader"].production
                 }
             ],
             "technologies": [
+                {
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
+                },
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"
@@ -273,24 +292,20 @@ export default {
             ],
         },*/
         {
-            "title": "GitHub Markdown Notes App",
-            "description": "This is a simple app that allows you to browse your GitHub repositories that have markdown files and view them. It's built with Next.js and uses the GitHub API to fetch data.",
-            "image": projects["github-markdown-reader"].image,
+            "title": "ValorVault",
+            "description": "ValorVault is a website that allows you to track your Valorant stats. It's built with Next.js and uses the Valorant API to fetch data.",
+            "image": projects.valorvault.image,
             "links": [
                 {
                     "title": "Source Code",
-                    "url": projects["github-markdown-reader"].github
+                    "url": projects["valorvault"].github
                 },
                 {
                     "title": "Visit",
-                    "url": projects["github-markdown-reader"].production
+                    "url": projects["valorvault"].production
                 }
             ],
             "technologies": [
-                {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
-                    "title": "Redis"
-                },
                 {
                     "icon": <SiNextdotjs size={ICON_SIZE}/>,
                     "title": "Next.js"

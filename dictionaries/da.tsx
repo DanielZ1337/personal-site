@@ -80,6 +80,15 @@ export default {
         "source": "Kildekode på"
     },
     "text": {
+        "email": "E-mail",
+        "name": "Navn",
+        "message": "Besked",
+        "contactform":{
+            "name": "Navn...",
+            "email":"E-mail...",
+            "message": "Skriv din besked her...",
+            "sendemail": "Send e-mail"
+        },
         "socials": "Sociale medier",
         "navigation": "Navigation",
         "visit": "Besøg",
@@ -88,6 +97,7 @@ export default {
         "skillsDescription2": "Disse er de erfaringer, jeg har fået gennem projekter på gymnasiet, universitetet og fritidsprojekter.",
         "hello": `Hej, mit navn er `,
         "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 3. semester.",
+        "contacttitle": "Kontakt mig",
         "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
         "projects": "Projekter",
@@ -190,17 +200,24 @@ export default {
             ]
         },
         {
-            "title": "ValorVault",
-            "description": "ValorVault er en hjemmeside, der giver dig mulighed for at følge dine Valorant-statistikker. Den er bygget med Next.js og bruger Valorant API'en til at hente data.",
-            "image": projects.valorvault.image,
+            "title": "GitHub Markdown Notes App",
+            "description": "Dette er en simpel app, der giver dig mulighed for at gennemse dine GitHub-repositorier, der har markdown-filer, og se dem. Den er bygget med Next.js og bruger GitHub API'en til at hente data.",
+            "extraDescription": {
+                "title": "Til at teste skal du bruge følgende:",
+                "credentials": {
+                    "username": "Brugernavn: testdanielz",
+                    "password": "Adgangskode: testdanielz123"
+                }
+            },
+            "image": projects["github-markdown-reader"].image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": projects.valorvault.github
+                    "url": projects["github-markdown-reader"].github
                 },
                 {
                     "title": "Besøg",
-                    "url": projects.valorvault.production
+                    "url": projects["github-markdown-reader"].production
                 }
             ],
             "technologies": [
@@ -224,7 +241,11 @@ export default {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
                 },
-            ]
+                {
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
+                }
+            ],
         },
         /*{
             "title": "E-Handel",
@@ -268,17 +289,17 @@ export default {
             ]
         },*/
         {
-            "title": "GitHub Markdown Notes App",
-            "description": "Dette er en simpel app, der giver dig mulighed for at gennemse dine GitHub-repositorier, der har markdown-filer, og se dem. Den er bygget med Next.js og bruger GitHub API'en til at hente data.",
-            "image": projects["github-markdown-reader"].image,
+            "title": "ValorVault",
+            "description": "ValorVault er en hjemmeside, der giver dig mulighed for at følge dine Valorant-statistikker. Den er bygget med Next.js og bruger Valorant API'en til at hente data.",
+            "image": projects.valorvault.image,
             "links": [
                 {
                     "title": "Kildekode",
-                    "url": projects["github-markdown-reader"].github
+                    "url": projects.valorvault.github
                 },
                 {
                     "title": "Besøg",
-                    "url": projects["github-markdown-reader"].production
+                    "url": projects.valorvault.production
                 }
             ],
             "technologies": [
@@ -302,11 +323,7 @@ export default {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
                 },
-                {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
-                    "title": "Redis"
-                }
-            ],
+            ]
         },
         /*{
             "title": "Simpel Spil Singleplayer og Multiplayer App",
