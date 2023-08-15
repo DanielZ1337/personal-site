@@ -17,7 +17,7 @@ export default function Skills({dict, skills}: { dict: Dictionary, skills: Dicti
                 <div className={"mt-40 flex-1 flex-col flex items-center h-full md:mx-0 mx-10"}>
                     <h1 className={"text-5xl font-bold"}>{dict.text.skills}</h1>
                     <p className={"text-2xl mt-6 mb-10 dark:text-muted-foreground"}>{dict.text.skillsDescription2}</p>
-                    <SkillsGrid skills={skills} dict={dict}/>
+                    <SkillsGrid skills={skills}/>
                     <InViewWrapper
                         initial={{opacity: 0, y: 50}}
                         whenInView={{opacity: 1, y: 0}}
