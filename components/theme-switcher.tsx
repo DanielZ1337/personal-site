@@ -8,19 +8,16 @@ import {Button} from "@/components/ui/button"
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
 import useDictionary from "@/dictionaries/useDictionary";
 import {useEffect, useState} from "react";
+import {useParams} from "next/navigation";
 
 export default function ThemeSwitcher() {
     const {setTheme, theme} = useTheme()
-    const [mounted, setMounted] = useState(false)
-    useEffect(() => setMounted(true), [])
 
     const {
         data,
         isLoading,
         error
-    } = useDictionary(typeof window !== 'undefined' ? window.location.href.split("/")[3].split("#")[0] : undefined)
-
-    if (!mounted) return null
+    } = useDictionary(useParams().lang as string)
 
     if (isLoading || !data) {
         return (

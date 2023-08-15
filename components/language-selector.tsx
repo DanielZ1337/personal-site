@@ -3,23 +3,16 @@
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {siteConfig} from "@/lib/site";
 import {Suspense, useEffect, useState} from "react";
-import {useRouter} from "next/navigation";
+import {useParams, useRouter} from "next/navigation";
 import Image from "next/image";
 import useDictionary from "@/dictionaries/useDictionary";
 
 const availableLanguages = siteConfig.langs
 
 export default function LanguageSelector() {
-    const [langCode, setLangCode] = useState<string | undefined>(undefined);
+    const [langCode, setLangCode] = useState<string | undefined>(useParams().lang as string);
     const [langName, setLangName] = useState<string | undefined>(undefined);
     const router = useRouter()
-    useEffect(() => {
-        const lang = window.location.href.split("/")[3].split('#')[0]
-        if (lang) {
-            setLangCode(lang)
-        }
-
-    }, []);
 
     const {data, isLoading, error} = useDictionary(langCode)
 
@@ -63,7 +56,7 @@ export default function LanguageSelector() {
         <div className={"z-10"}>
             <Select value={langCode} onValueChange={changeLang}>
                 <SelectTrigger className={"relative overflow-clip"}>
-                    <SelectValue aria-label={langCode} className={"absolute"}>
+                    <SelectValue aria-label={langCode} >
                         <Suspense>
                             <span>{langName}</span>
                             <Image src={`/languages/${langCode}.svg`}
