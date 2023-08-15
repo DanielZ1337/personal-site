@@ -12,6 +12,8 @@ import {useParams} from "next/navigation";
 
 export default function ThemeSwitcher() {
     const {setTheme, theme} = useTheme()
+    const [mounted, setMounted] = useState(false)
+    useEffect(() => {setMounted(true)}, []);
 
     const {
         data,
