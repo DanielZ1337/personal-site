@@ -205,8 +205,8 @@ export default {
             "extraDescription": {
                 "title": "Til at teste skal du bruge følgende:",
                 "credentials": {
-                    "username": "Brugernavn: testdanielz",
-                    "password": "Adgangskode: testdanielz123"
+                    "link": "Link: https://github.com/testdanielz/test-mds",
+                    "username": "Brugernavn: testdanielz"
                 }
             },
             "image": projects["github-markdown-reader"].image,

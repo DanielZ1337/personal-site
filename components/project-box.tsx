@@ -22,8 +22,8 @@ interface ProjectBoxProps {
     readonly extraDescription?: {
         readonly title: string;
         readonly credentials: {
+            readonly link: string;
             readonly username: string;
-            readonly password: string;
         };
     };
 
@@ -70,8 +70,8 @@ export default async function ProjectBox({
                         {extraDescription && (
                             <>
                                 <span className="font-bold">{extraDescription.title}</span>
+                                <span>{extraDescription.credentials.link}</span>
                                 <span>{extraDescription.credentials.username}</span>
-                                <span>{extraDescription.credentials.password}</span>
                             </>
                         )}
                     </small>

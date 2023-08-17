@@ -202,10 +202,10 @@ export default {
             "title": "GitHub Markdown Notes App",
             "description": "This is a simple app that allows you to browse your GitHub repositories that have markdown files and view them. It's built with Next.js and uses the GitHub API to fetch data.",
             "extraDescription": {
-                "title": "For testing use the following credentials:",
+                "title": "For testing use the following:",
                 "credentials": {
-                    "username": "Username: testdanielz",
-                    "password": "Password: testdanielz123"
+                    "link": "Link: https://github.com/testdanielz/test-mds",
+                    "username": "Username: testdanielz"
                 }
             },
             "image": projects["github-markdown-reader"].image,
