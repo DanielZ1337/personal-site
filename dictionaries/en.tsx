@@ -82,11 +82,16 @@ export default {
         "email": "Email",
         "name": "Name",
         "message": "Message",
-        "contactform":{
-            "name": "Navn...",
-            "email":"Email...",
+        "contactform": {
+            "name": "Name...",
+            "email": "Email...",
             "message": "Write your message...",
-            "sendemail": "Send e-mail"
+            "sendemail": "Send e-mail",
+            "sending": "Sending...",
+            "toast": {
+                "title": "E-mail sent",
+                "description": "Your e-mail has been sent successfully."
+            }
         },
         "socials": "Social Media",
         "navigation": "Navigation",

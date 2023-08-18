@@ -87,7 +87,12 @@ export default {
             "name": "Navn...",
             "email":"E-mail...",
             "message": "Skriv din besked her...",
-            "sendemail": "Send e-mail"
+            "sendemail": "Send e-mail",
+            "sending": "Sender...",
+            "toast": {
+                "title": "E-mail sendt",
+                "description": "Din e-mail er blevet sendt. Jeg vil svare dig så hurtigt som muligt."
+            }
         },
         "socials": "Sociale medier",
         "navigation": "Navigation",
@@ -200,7 +205,7 @@ export default {
             ]
         },
         {
-            "title": "GitHub Markdown Notes App",
+            "title": "GitHub Markdown-Noter App",
             "description": "Dette er en simpel app, der giver dig mulighed for at gennemse dine GitHub-repositorier, der har markdown-filer, og se dem. Den er bygget med Next.js og bruger GitHub API'en til at hente data.",
             "extraDescription": {
                 "title": "Til at teste skal du bruge følgende:",
