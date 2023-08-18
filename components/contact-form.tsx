@@ -22,12 +22,12 @@ export default function ContactForm({dict}: { dict: Dictionary }) {
                 <div className={"mx-auto flex gap-2 w-full md:w-2/3 xl:w-1/2"}>
                     <div className={"whitespace-pre-wrap flex-wrap w-full"}>
                         <p className={"text-xl mb-5 md:mt-0 mt-16 dark:text-muted-foreground text-start"}>{dict.text.email}: <span>
-                <Link href={`mailto:${siteConfig.links.email}`}
+                <Link href={`mailto:${siteConfig.links.dev_email}`}
                       className={"text-primary hover:underline"}
                       target={"_blank"}
                       rel={"noreferrer"}
                 >
-                    {siteConfig.links.email}
+                    {siteConfig.links.dev_email}
                 </Link>
             </span>
                         </p>

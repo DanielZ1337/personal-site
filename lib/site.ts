@@ -12,6 +12,8 @@ export const siteConfig = {
         email: "danielz2nd@hotmail.com",
         github_repo: "https://github.com/DanielZ1337/portfolio-site",
         youtube: "https://www.youtube.com/@danielz1337tm",
+        dev_email: "daniel@danielz.dev",
+        dev_emailto: "mailto:daniel@danielz.dev"
     },
     langs: ['en', 'da'],
     defaultLang: 'en',
