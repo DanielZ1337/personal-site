@@ -326,10 +326,6 @@ export default {
                     "icon": <SiVercel size={ICON_SIZE}/>,
                     "title": "Vercel"
                 },
-                {
-                    "icon": <SiGithub size={ICON_SIZE}/>,
-                    "title": "GitHub API"
-                },
             ],
         },
         /*{
