@@ -12,45 +12,21 @@ import {useState} from "react";
 import {m} from "framer-motion";
 import {GoArrowLeft, GoArrowRight} from "react-icons/go";
 import {shouldOpenInNewTab} from "@/lib/utils";
+import useDictionary from "@/dictionaries/useDictionary";
+import socials from "@/lib/socials";
 
 
-type Tabs = "Nav" | "Socials"
+type Tabs = "Nav" | "Socials" | "Others"
 
-export default function MobileNavSocials() {
-    const {lang} = useParams();
+interface MobileNavProps {
+    readonly lang: string;
+}
+
+
+export default function MobileNav({lang}: MobileNavProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [tab, setTab] = useState<Tabs>("Nav")
-    const {data: dict} = useQuery(['dict', lang], () => getDictionary(String(lang)), {
-        retry: false,
-        refetchOnWindowFocus: false,
-        refetchOnMount: false,
-        refetchOnReconnect: false,
-        refetchInterval: false,
-        refetchIntervalInBackground: false,
-    })
-
-    const socials = {
-        "LinkedIn": {
-            "href": siteConfig.links.linkedin,
-            "icon": <BiLogoLinkedin/>
-        },
-        "GitHub": {
-            "href": siteConfig.links.github,
-            "icon": <BiLogoGithub/>
-        },
-        "Email": {
-            "href": siteConfig.links.emailto,
-            "icon": <BiMailSend/>
-        },
-        "Twitter": {
-            "href": siteConfig.links.twitter,
-            "icon": <BiLogoTwitter/>
-        },
-        "YouTube": {
-            "href": siteConfig.links.youtube,
-            "icon": <BiLogoYoutube/>
-        }
-    }
+    const {data: dict, isLoading} = useDictionary(lang as string)
 
     if (!dict) return (<></>)
 
@@ -76,7 +52,7 @@ export default function MobileNavSocials() {
                         <div className="p-4 bg-neutral-200 dark:bg-black rounded-t-[10px] flex-1">
                             <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8"/>
                             <div className={"flex flex-col gap-2 justify-center items-center"}>
-                                {tab === "Nav" ? (
+                                {tab === "Nav" && (
                                     <>
                                         {Object.entries(dict.navbar.links[0]).map(([key, value]) => (
                                             <Link href={value.anchor} key={key} className={LinkVariant}
@@ -86,9 +62,29 @@ export default function MobileNavSocials() {
                                                 {value.title}
                                             </Link>
                                         ))}
-                                        <p className={LinkVariant} onClick={() => setTab("Socials")}>{dict.text.socials}
-                                            <GoArrowRight/></p>
-                                    </>) : (
+                                        <p className={LinkVariant} onClick={() => setTab("Others")}>
+                                            {dict.text.others} <GoArrowRight/>
+                                        </p>
+                                        <p className={LinkVariant} onClick={() => setTab("Socials")}>
+                                            {dict.text.socials} <GoArrowRight/>
+                                        </p>
+                                    </>)}
+                                {tab === "Others" && (
+                                    <>
+                                        {Object.entries(dict.navbar.others[0]).map(([key, value]) => (
+                                            <Link href={value.anchor} key={key} className={LinkVariant}
+                                                  target={shouldOpenInNewTab(value.anchor) ? "_blank" : '_self'}
+                                                  rel={shouldOpenInNewTab(value.anchor) ? "noopener noreferrer" : undefined}
+                                            >
+                                                {value.title}
+                                            </Link>
+                                        ))}
+                                        <p className={LinkVariant} onClick={() => setTab("Nav")}>
+                                            <GoArrowLeft/>{dict.text.navigation}
+                                        </p>
+                                    </>
+                                )}
+                                {tab === "Socials" && (
                                     <>
                                         {Object.entries(socials).map(([key, value]) => (
                                             <Link href={value.href} key={key}
@@ -101,7 +97,8 @@ export default function MobileNavSocials() {
                                             </Link>
                                         ))}
                                         <p className={LinkVariant} onClick={() => setTab("Nav")}>
-                                            <GoArrowLeft/>{dict.text.navigation}</p>
+                                            <GoArrowLeft/>{dict.text.navigation}
+                                        </p>
                                     </>
                                 )}
                             </div>
@@ -112,11 +109,3 @@ export default function MobileNavSocials() {
         </div>
     )
 }
-/*<div className={"flex flex-col gap-2 z-10 fixed lg:hidden bottom-0 left-0 right-0 bg-background dark:bg-black/90 p-4"}>
-    {Object.entries(socials).map(([key, value]) => (
-        <Link href={value.href} key={key} className={"flex items-center gap-2"}>
-            {value.icon}
-            <span>{key}</span>
-        </Link>
-    ))}
-</div>*/

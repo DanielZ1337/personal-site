@@ -61,6 +61,14 @@ export default {
                 }
             }
         ],
+        "others": [
+            {
+                "youtube": {
+                    "title": "YouTube Værker",
+                    "anchor": "/da/youtube",
+                }
+            }
+        ],
         "home": "Hjem",
         "about": "Om",
         "contact": "Kontakt",
@@ -94,6 +102,7 @@ export default {
                 "description": "Din e-mail er blevet sendt. Jeg vil svare dig så hurtigt som muligt."
             }
         },
+        "others": "Andre",
         "socials": "Sociale medier",
         "navigation": "Navigation",
         "visit": "Besøg",

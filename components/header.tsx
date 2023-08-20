@@ -6,13 +6,8 @@ import {ReactNode} from "react";
 import LanguageSelector from "@/components/language-selector";
 import {getDictionary} from "@/dictionaries/utils/dictionaries";
 import HeaderScroll from "@/components/header-scroll";
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem, NavigationMenuLink,
-    NavigationMenuList, NavigationMenuTrigger
-} from "@/components/ui/navigation-menu";
 import {shouldOpenInNewTab} from "@/lib/utils";
+import OtherNavigationMenu from "@/components/other-navigation-menu";
 
 export default async function Header({lang}: { lang: string }) {
     const dict = await getDictionary(lang)
@@ -38,6 +33,9 @@ export default async function Header({lang}: { lang: string }) {
                             </NavLink>
                         </li>
                     ))}
+                    <li>
+                        <OtherNavigationMenu navbarOthers={dict.navbar.others} othersText={dict.text.others}/>
+                    </li>
                 </ul>
                 <div className={"flex items-center gap-2"}>
                     <LanguageSelector/>

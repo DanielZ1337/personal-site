@@ -60,6 +60,14 @@ export default {
                 }
             }
         ],
+        "others": [
+            {
+                "youtube": {
+                    "title": "YouTube Works",
+                    "anchor": "/en/youtube",
+                },
+            }
+        ],
         "home": "Home",
         "about": "About",
         "contact": "Contact",
@@ -93,6 +101,7 @@ export default {
                 "description": "Your e-mail has been sent successfully."
             }
         },
+        "others": "Others",
         "socials": "Social Media",
         "navigation": "Navigation",
         "visit": "Visit",

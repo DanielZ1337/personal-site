@@ -10,7 +10,7 @@ import {Toaster} from "@/components/ui/toaster";
 import ScrollToTop from "@/components/scroll-to-top";
 import SideNavSocials from "@/components/sidenav-socials";
 import {Suspense} from "react";
-import MobileNavSocials from "@/components/mobile-nav-socials";
+import MobileNav from "@/components/mobile-nav";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -134,13 +134,13 @@ export default function RootLayout({
             <Providers>
                 <div className="relative flex min-h-[100dvh] flex-col">
                     <Header lang={lang}/>
+                    <MobileNav lang={lang}/>
                     <div className="flex-1 flex-col flex mt-16">{children}</div>
                     <Footer lang={lang}/>
                 </div>
                 <Toaster/>
                 <ScrollToTop/>
                 <SideNavSocials/>
-                <MobileNavSocials/>
             </Providers>
         </Suspense>
         </body>

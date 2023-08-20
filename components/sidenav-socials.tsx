@@ -7,41 +7,13 @@ import {m} from "framer-motion";
 import {useParams} from "next/navigation";
 import {useQuery} from "@tanstack/react-query";
 import {getDictionary} from "@/dictionaries/utils/dictionaries";
+import useDictionary from "@/dictionaries/useDictionary";
+import socials from "@/lib/socials";
 
 export default function SideNavSocials() {
 
     const {lang} = useParams();
-    const {data: dict} = useQuery(['dict', lang], () => getDictionary(String(lang)), {
-        retry: false,
-        refetchOnWindowFocus: false,
-        refetchOnMount: false,
-        refetchOnReconnect: false,
-        refetchInterval: false,
-        refetchIntervalInBackground: false,
-    })
-
-    const socials = {
-        "LinkedIn": {
-            "href": siteConfig.links.linkedin,
-            "icon": <BiLogoLinkedin/>
-        },
-        "GitHub": {
-            "href": siteConfig.links.github,
-            "icon": <BiLogoGithub/>
-        },
-        "Email": {
-            "href": siteConfig.links.emailto,
-            "icon": <BiMailSend/>
-        },
-        "Twitter": {
-            "href": siteConfig.links.twitter,
-            "icon": <BiLogoTwitter/>
-        },
-        "YouTube": {
-            "href": siteConfig.links.youtube,
-            "icon": <BiLogoYoutube/>
-        }
-    }
+    const {data: dict, isLoading} = useDictionary(lang as string)
 
     if (!dict) {
         return null
