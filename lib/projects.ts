@@ -23,5 +23,10 @@ export const projects = {
         production: "https://simple-games.danielz.dev/",
         github: "https://github.com/DanielZ1337/simple-games",
         image: "/images/projects/simple-games-singleplayer-and-multiplayer-app.png",
+    },
+    "ghroovy": {
+        production: "https://ghroovy.danielz.dev/",
+        github: "https://github.com/DanielZ1337/ghroovy",
+        image: "/images/projects/ghroovy.png",
     }
 }

@@ -261,6 +261,47 @@ export default {
                 }
             ],
         },
+        {
+            "title": "Ghroovy E-Handel",
+            "description": "Dette er en e-handels hjemmeside, bygget med Next.js",
+            "image": projects["ghroovy"].image,
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": projects["ghroovy"].github
+                },
+                {
+                    "title": "Besøg",
+                    "url": projects["ghroovy"].production
+                }
+            ],
+            "technologies": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                },
+                {
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
+                }
+            ],
+        },
         /*{
             "title": "E-Handel",
             "description": "Dette er en e-handels hjemmeside, bygget med Next.js og PostgreSQL. Det er en simpel hjemmeside, der giver dig mulighed for at tilføje produkter til din indkøbskurv og foretage betaling.",
