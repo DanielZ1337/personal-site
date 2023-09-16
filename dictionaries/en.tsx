@@ -265,6 +265,47 @@ export default {
             ],
         },
         {
+            "title": "SMLinks - Social Media Links",
+            "description": "SMLinks is a website that allows you to create a profile that displays your social media links. It's built with Next.js and uses Redis to store data.",
+            "image": projects["smlinks"].image,
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": projects["smlinks"].github
+                },
+                {
+                    "title": "Besøg",
+                    "url": projects["smlinks"].production
+                }
+            ],
+            "technologies": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                },
+                {
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
+                }
+            ],
+        },
+        {
             "title": "Ghroovy - E-Commerce",
             "description": "Ghroovy is an e-commerce website built with Next.js",
             "image": projects["ghroovy"].image,

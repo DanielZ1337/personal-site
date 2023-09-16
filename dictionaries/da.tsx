@@ -1,5 +1,4 @@
 import {
-    SiBootstrap,
     SiCplusplus,
     SiGit,
     SiMongodb,
@@ -8,7 +7,6 @@ import {
     SiPostgresql,
     SiReact,
     SiRedis,
-    SiSocketdotio,
     SiTailwindcss,
     SiTypescript,
     SiVercel
@@ -91,9 +89,9 @@ export default {
         "email": "E-mail",
         "name": "Navn",
         "message": "Besked",
-        "contactform":{
+        "contactform": {
             "name": "Navn...",
-            "email":"E-mail...",
+            "email": "E-mail...",
             "message": "Skriv din besked her...",
             "sendemail": "Send e-mail",
             "sending": "Sender...",
@@ -232,6 +230,47 @@ export default {
                 {
                     "title": "Besøg",
                     "url": projects["github-markdown-reader"].production
+                }
+            ],
+            "technologies": [
+                {
+                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "title": "Next.js"
+                },
+                {
+                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "title": "Vercel"
+                },
+                {
+                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "title": "Redis"
+                }
+            ],
+        },
+        {
+            "title": "SMLinks - Sociale Medier Links",
+            "description": "Dette er en simpel app, der giver dig mulighed for at lave en profil og tilføje links til dine sociale medier. Den er bygget med Next.js og bruger Redis til at gemme data.",
+            "image": projects["smlinks"].image,
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": projects["smlinks"].github
+                },
+                {
+                    "title": "Besøg",
+                    "url": projects["smlinks"].production
                 }
             ],
             "technologies": [

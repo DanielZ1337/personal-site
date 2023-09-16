@@ -28,5 +28,10 @@ export const projects = {
         production: "https://ghroovy.danielz.dev/",
         github: "https://github.com/DanielZ1337/ghroovy",
         image: "/images/projects/ghroovy.png",
+    },
+    "smlinks": {
+        production: "https://smlinks.danielz.dev/",
+        github: "https://github.com/DanielZ1337/smlinks",
+        image: "/images/projects/smlinks.png",
     }
 }
