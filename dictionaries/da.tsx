@@ -300,7 +300,7 @@ export default {
                 }
             ],
         },
-        {
+        /*{
             "title": "Ghroovy E-Handel",
             "description": "Dette er en e-handels hjemmeside, bygget med Next.js",
             "image": projects["ghroovy"].image,
@@ -340,7 +340,7 @@ export default {
                     "title": "Redis"
                 }
             ],
-        },
+        },*/
         /*{
             "title": "E-Handel",
             "description": "Dette er en e-handels hjemmeside, bygget med Next.js og PostgreSQL. Det er en simpel hjemmeside, der giver dig mulighed for at tilføje produkter til din indkøbskurv og foretage betaling.",

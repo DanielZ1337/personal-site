@@ -305,7 +305,7 @@ export default {
                 }
             ],
         },
-        {
+        /*{
             "title": "Ghroovy - E-Commerce",
             "description": "Ghroovy is an e-commerce website built with Next.js",
             "image": projects["ghroovy"].image,
@@ -345,7 +345,7 @@ export default {
                     "title": "Redis"
                 }
             ],
-        },
+        },*/
         /*{
             "title": "E-Commerce",
             "description": "This is an e-commerce website built with Next.js and PostgreSQL. It's a simple website that allows you to add products to your cart and checkout.",
