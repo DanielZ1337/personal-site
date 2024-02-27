@@ -1,9 +1,12 @@
 import {
     SiCplusplus,
+    SiElectron,
     SiGit,
+    SiLaravel,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
+    SiPhp,
     SiPostgresql,
     SiReact,
     SiRedis,
@@ -11,8 +14,8 @@ import {
     SiTypescript,
     SiVercel
 } from "react-icons/si";
-import {DiJava} from "react-icons/di";
-import {projects} from "@/lib/projects";
+import { DiJava } from "react-icons/di";
+import { projects } from "@/lib/projects";
 
 const ICON_SIZE = "2.5rem";
 
@@ -54,7 +57,7 @@ export default {
                 },
                 "resume": {
                     "id": "cv",
-                    "anchor": "/resume.pdf",
+                    "anchor": "/resume_new.pdf",
                     "title": "CV"
                 }
             }
@@ -108,13 +111,13 @@ export default {
         "skillsDescription": "Her er nogle af de færdigheder, jeg har opnået gennem min uddannelse og projekter.",
         "skillsDescription2": "Disse er de erfaringer, jeg har fået gennem projekter på gymnasiet, universitetet og fritidsprojekter.",
         "hello": `Hej, mit navn er `,
-        "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 3. semester.",
+        "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 4. semester.",
         "contacttitle": "Kontakt mig",
         "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
         "projects": "Projekter",
         "projectssubtitle": "Her er nogle af de projekter, jeg har arbejdet på.",
-        "projectsDescription": "Går lige nu på 3. semester på SDU, hvor jeg læser til softwareingeniør. Her har jeg arbejdet mest med PostgreSQL og Java.",
+        "projectsDescription": "Går lige nu på 4. semester på SDU, hvor jeg læser til softwareingeniør. Her har jeg arbejdet mest med PostgreSQL og Java.",
         "projectsDescription2": "Jeg har arbejdet på et par projekter, både alene og sammen med andre. Så har jeg også arbejdet med frontend og backend, samt med både relationelle og ikke-relationelle databaser.",
         "projectsDescription3": "Derefter har jeg også arbejdet med Next.js og React, hvor Next.js har været min primære erfaring med React. Dette har været i JavaScript og TypeScript (bedst).",
         "projectsDescription4": "Jeg har også arbejdet med C++ og har en god forståelse for det. Dette har været i forbindelse med gymnasiet, hvor jeg tog HTX (Matematik A - Programmering B).",
@@ -128,50 +131,60 @@ export default {
         {
             "title": "React",
             "description": "Next.js er bygget på react og er et framework til react; det er min primære erfaring med React",
-            "icon": <SiReact size={ICON_SIZE}/>
+            "icon": <SiReact size={ICON_SIZE} />
         },
         {
             "title": "Next.js",
             "description": "Har lavet et par projekter med Next.js, og har derfor erfaring med det",
-            "icon": <SiNextdotjs size={ICON_SIZE}/>
+            "icon": <SiNextdotjs size={ICON_SIZE} />
         },
         {
             "title": "TypeScript",
             "description": "Meste af hvad jeg laver er skrevet i TypeScript, da det gør tingene nemmere med type-safety",
-            "icon": <SiTypescript size={ICON_SIZE}/>
+            "icon": <SiTypescript size={ICON_SIZE} />
         },
         {
             "title": "Java",
             "description": "Har haft Java på universitetet i et par semestre, hvor jeg har scoret 12 i begge",
-            "icon": <DiJava size={ICON_SIZE}/>
+            "icon": <DiJava size={ICON_SIZE} />
         },
         {
             "title": "C++",
             "description": "Da jeg tog HTX (Matematik A - Programmering B), havde jeg C++ i gymnasiet. Så har en god forståelse for C++",
-            "icon": <SiCplusplus size={ICON_SIZE}/>
+            "icon": <SiCplusplus size={ICON_SIZE} />
         },
         {
             "title": "Node.js",
-            "icon": <SiNodedotjs size={ICON_SIZE}/>
+            "icon": <SiNodedotjs size={ICON_SIZE} />
         },
         {
             "title": "Redis",
-            "icon": <SiRedis size={ICON_SIZE}/>
+            "icon": <SiRedis size={ICON_SIZE} />
         },
         {
             "title": "MongoDB",
             "description": "MongoDB blev brugt i ét enkelt semester på universitet",
-            "icon": <SiMongodb size={ICON_SIZE}/>
+            "icon": <SiMongodb size={ICON_SIZE} />
         },
         {
             "title": "PostgreSQL",
             "description": "PostgreSQL er den form for database, jeg har mest erfaring med. Det var vores primære database på universitetet, samt har selv brugt det tilbage i gymnasiet til et projekt",
-            "icon": <SiPostgresql size={ICON_SIZE}/>
+            "icon": <SiPostgresql size={ICON_SIZE} />
         },
         {
             "title": "Git",
-            "icon": <SiGit size={ICON_SIZE}/>
+            "icon": <SiGit size={ICON_SIZE} />
         },
+        {
+            "title": "Laravel",
+            "description": "Har arbejdet med Laravel i et par projekter, både på universitetet og arbejde",
+            "icon": <SiLaravel size={ICON_SIZE} />
+        },
+        {
+            "title": "PHP",
+            "description": "Har arbejdet med Laravel og derefter også i PHP",
+            "icon": <SiPhp size={ICON_SIZE} />
+        }
     ],
     "projects": [
         {
@@ -190,24 +203,65 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
+                }
+            ]
+        },
+        {
+            "title": "ITSDU",
+            "description": "ITSDU er en electron desktop applikation lavet med Vite og React i TypeScript, hvor man kan logge ind vha. itslearning's OAUTH, og som bruger ens access token til at lave requests til itslearning's REST API endpoints på brugerens vegne. Da itslearning er Syddansk Universitetets e-læringsplatform, var/er målet at tilbyde en bedre oplevelse, samt gøre det nemmere og hurtigere for de fleste ting, en studerende vil bruge itslearning til.",
+            "image": projects["itsdu"].image,
+            "links": [
+                {
+                    "title": "Kildekode",
+                    "url": projects["itsdu"].github
+                },
+                {
+                    "title": "Besøg hjemmeside",
+                    "url": projects["itsdu"].production
+                },
+                {
+                    "title": "Hjemmeside kildekode",
+                    "url": projects["itsdu"].website_github
+                }
+            ],
+            "technologies": [
+                {
+                    "icon": <SiReact size={ICON_SIZE} />,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE} />,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiElectron size={ICON_SIZE} />,
+                    "title": "Electron"
+                },
+                {
+                    "icon": <SiPostgresql size={ICON_SIZE} />,
+                    "title": "PostgreSQL"
                 }
             ]
         },
@@ -234,27 +288,27 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
                 },
                 {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "icon": <SiRedis size={ICON_SIZE} />,
                     "title": "Redis"
                 }
             ],
@@ -275,27 +329,27 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
                 },
                 {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "icon": <SiRedis size={ICON_SIZE} />,
                     "title": "Redis"
                 }
             ],
@@ -398,23 +452,23 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
                 },
             ]

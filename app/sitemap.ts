@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
         },
         {
+            url: `${siteConfig.url}/da/resume_new.pdf`,
+            lastModified: new Date(),
+        },
+        {
             url: `${siteConfig.url}/da`,
             lastModified: new Date(),
         },

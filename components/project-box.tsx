@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import {TbExternalLink} from "react-icons/tb";
+import { TbExternalLink } from "react-icons/tb";
 import Chip from "@/components/chip";
-import {SiGithub} from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 
 const ICON_SIZE = 24; // You can adjust the icon size as needed
 
@@ -30,13 +30,13 @@ interface ProjectBoxProps {
 }
 
 export default async function ProjectBox({
-                                             title,
-                                             description,
-                                             image,
-                                             links,
-                                             technologies,
-                                             extraDescription
-                                         }: ProjectBoxProps) {
+    title,
+    description,
+    image,
+    links,
+    technologies,
+    extraDescription
+}: ProjectBoxProps) {
 
     return (
         <div
@@ -58,14 +58,14 @@ export default async function ProjectBox({
             <div className="flex flex-col gap-4 h-full justify-between">
                 <div>
                     <Link href={links[1].url}
-                          className="text-2xl font-bold mb-2 hover:underline" target="_blank"
-                          rel="noreferrer">
+                        className="text-2xl font-bold mb-2 hover:underline" target="_blank"
+                        rel="noreferrer">
                         {title}
                         <TbExternalLink
-                            className={"ml-2 mb-2 inline-block flex-shrink-0 flex-grow-0 text-primary"}/>
+                            className={"ml-2 mb-2 inline-block flex-shrink-0 flex-grow-0 text-primary"} />
                         <span className={"sr-only"}>{links[0].title}</span>
                     </Link>
-                    <p className="text-lg mb-5">{description}</p>
+                    <p className="mb-5 text-balance">{description}</p>
                     <small className="text-sm text-muted-foreground flex-col flex">
                         {extraDescription && (
                             <>
@@ -82,10 +82,10 @@ export default async function ProjectBox({
                             key={technology.title}
                             className="inline-flex items-center px-3 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary/50 gap-2 shadow-sm hover:bg-primary/20 hover:text-primary transition-all"
                         >
-                                {React.cloneElement(technology.icon, {size: '1.25rem', className: "text-primary"})}
+                            {React.cloneElement(technology.icon, { size: '1.25rem', className: "text-primary" })}
                             {technology.title}
                             <span className={"sr-only"}>{technology.title}</span>
-                            </span>
+                        </span>
                     ))}
                 </div>
             </div>
@@ -95,8 +95,17 @@ export default async function ProjectBox({
                     prompt={links[0].title}
                     className={"mx-auto mt-6 w-full"}
                 >
-                    <SiGithub className={"text-primary"}/>
+                    <SiGithub className={"text-primary"} />
                 </Chip>
+                {links?.[2]?.url && (
+                    <Chip
+                        link={links[2].url}
+                        prompt={links[2].title}
+                        className={"mx-auto mt-6 w-full"}
+                    >
+                        <SiGithub className={"text-primary"} />
+                    </Chip>
+                )}
             </div>
         </div>
     );

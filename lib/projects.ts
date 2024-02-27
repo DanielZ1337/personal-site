@@ -7,7 +7,7 @@ export const projects = {
     "github-markdown-reader": {
         production: "https://md-reader.danielz.dev/",
         github: "https://github.com/DanielZ1337/git-markdown-notes-reader",
-        image:"/images/projects/github-markdown-reader.png",
+        image: "/images/projects/github-markdown-reader.png",
     },
     "valorvault": {
         production: "https://valorvault.danielz.dev/",
@@ -33,5 +33,11 @@ export const projects = {
         production: "https://smlinks.danielz.dev/",
         github: "https://github.com/DanielZ1337/smlinks",
         image: "/images/projects/smlinks.png",
-    }
+    },
+    "itsdu": {
+        production: "https://itsdu.danielz.dev/",
+        github: "https://github.com/DanielZ1337/itsdu",
+        image: "/images/projects/itsdu.png",
+        website_github: "https://github.com/DanielZ1337/itsdu-site",
+    },
 }

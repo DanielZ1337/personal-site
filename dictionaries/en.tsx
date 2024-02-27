@@ -1,10 +1,13 @@
 import {
     SiCplusplus,
+    SiElectron,
     SiGit,
     SiGithub,
+    SiLaravel,
     SiMongodb,
     SiNextdotjs,
     SiNodedotjs,
+    SiPhp,
     SiPostgresql,
     SiReact,
     SiRedis,
@@ -12,8 +15,8 @@ import {
     SiTypescript,
     SiVercel
 } from "react-icons/si";
-import {DiJava} from "react-icons/di";
-import {projects} from "@/lib/projects";
+import { DiJava } from "react-icons/di";
+import { projects } from "@/lib/projects";
 
 const ICON_SIZE = "2.5rem";
 
@@ -55,7 +58,7 @@ export default {
                 },
                 "resume": {
                     "id": "resume",
-                    "anchor": "/resume.pdf",
+                    "anchor": "/resume_new.pdf",
                     "title": "CV"
                 }
             }
@@ -109,13 +112,13 @@ export default {
         "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",
         "skillsDescription2": "These are the experiences I have gained through projects in high school, university, and personal projects.",
         "hello": "Hello, my name is ",
-        "about": "I am a 21-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 3rd semester.",
+        "about": "I am a 21-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 4th semester.",
         "contacttitle": "Contact me",
         "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
         "projects": "Projects",
         "projectssubtitle": "Here are some of the projects I have worked on.",
-        "projectsDescription": "I am currently on my 3rd semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
+        "projectsDescription": "I am currently on my 4th semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
         "projectsDescription2": "I have been involved in several projects, both individually and collaboratively. I have experience with both frontend and backend development, as well as working with relational and non-relational databases.",
         "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript (best).",
         "projectsDescription4": "I have also worked with C++ and have a good understanding of it. This was in connection with high school, where I took the Higher Technical Examination (HTX) (Mathematics A - Programming B).",
@@ -129,49 +132,59 @@ export default {
         {
             "title": "React",
             "description": "Next.js is built on React and is a framework for React; it's my primary experience with React.",
-            "icon": <SiReact size={ICON_SIZE}/>
+            "icon": <SiReact size={ICON_SIZE} />
         },
         {
             "title": "Next.js",
             "description": "I've worked on a couple of projects with Next.js, gaining experience with it.",
-            "icon": <SiNextdotjs size={ICON_SIZE}/>
+            "icon": <SiNextdotjs size={ICON_SIZE} />
         },
         {
             "title": "TypeScript",
             "description": "Most of what I do is written in TypeScript, as it makes things easier with type safety.",
-            "icon": <SiTypescript size={ICON_SIZE}/>
+            "icon": <SiTypescript size={ICON_SIZE} />
         },
         {
             "title": "Java",
             "description": "I studied Java at university for a couple of semesters and scored top grades (12) in both.",
-            "icon": <DiJava size={ICON_SIZE}/>
+            "icon": <DiJava size={ICON_SIZE} />
         },
         {
             "title": "C++",
             "description": "During my high school education (Mathematics A - Programming B), I learned C++. Therefore, I have a solid understanding of C++.",
-            "icon": <SiCplusplus size={ICON_SIZE}/>
+            "icon": <SiCplusplus size={ICON_SIZE} />
         },
         {
             "title": "Node.js",
-            "icon": <SiNodedotjs size={ICON_SIZE}/>
+            "icon": <SiNodedotjs size={ICON_SIZE} />
         },
         {
             "title": "Redis",
-            "icon": <SiRedis size={ICON_SIZE}/>
+            "icon": <SiRedis size={ICON_SIZE} />
         },
         {
             "title": "MongoDB",
             "description": "I used MongoDB for a single semester at university.",
-            "icon": <SiMongodb size={ICON_SIZE}/>
+            "icon": <SiMongodb size={ICON_SIZE} />
         },
         {
             "title": "PostgreSQL",
             "description": "PostgreSQL is the type of database I have the most experience with. It was our primary database at university, and I also used it for a project during high school.",
-            "icon": <SiPostgresql size={ICON_SIZE}/>
+            "icon": <SiPostgresql size={ICON_SIZE} />
         },
         {
             "title": "Git",
-            "icon": <SiGit size={ICON_SIZE}/>
+            "icon": <SiGit size={ICON_SIZE} />
+        },
+        {
+            "title": "Laravel",
+            "description": "I have worked with Laravel, both at work and at university.",
+            "icon": <SiLaravel size={ICON_SIZE} />
+        },
+        {
+            "title": "PHP",
+            "description": "Since I have worked with Laravel, I have also worked with PHP.",
+            "icon": <SiPhp size={ICON_SIZE} />
         }
     ],
     "projects": [
@@ -191,24 +204,65 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
+                }
+            ]
+        },
+        {
+            "title": "ITSDU",
+            "description": "ITSDU is an electron desktop application created with Vite and React in TypeScript, allowing users to log in using itslearning's OAUTH and utilize their access token to make requests to itslearning's REST API endpoints on behalf of the user. Since itslearning is the e-learning platform of the University of Southern Denmark, the goal was/is to provide a better experience and make it easier and faster for most tasks a student would use itslearning for.",
+            "image": projects["itsdu"].image,
+            "links": [
+                {
+                    "title": "Source Code",
+                    "url": projects["itsdu"].github
+                },
+                {
+                    "title": "Visit",
+                    "url": projects["itsdu"].production
+                },
+                {
+                    "title": "Website Source Code",
+                    "url": projects["itsdu"].website_github
+                }
+            ],
+            "technologies": [
+                {
+                    "icon": <SiReact size={ICON_SIZE} />,
+                    "title": "React"
+                },
+                {
+                    "icon": <SiTypescript size={ICON_SIZE} />,
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
+                    "title": "TailwindCSS"
+                },
+                {
+                    "icon": <SiElectron size={ICON_SIZE} />,
+                    "title": "Electron"
+                },
+                {
+                    "icon": <SiPostgresql size={ICON_SIZE} />,
+                    "title": "PostgreSQL"
                 }
             ]
         },
@@ -235,31 +289,31 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "icon": <SiRedis size={ICON_SIZE} />,
                     "title": "Redis"
                 },
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
                 },
                 {
-                    "icon": <SiGithub size={ICON_SIZE}/>,
+                    "icon": <SiGithub size={ICON_SIZE} />,
                     "title": "GitHub API"
                 },
             ],
@@ -280,27 +334,27 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
                 },
                 {
-                    "icon": <SiRedis size={ICON_SIZE}/>,
+                    "icon": <SiRedis size={ICON_SIZE} />,
                     "title": "Redis"
                 }
             ],
@@ -403,23 +457,23 @@ export default {
             ],
             "technologies": [
                 {
-                    "icon": <SiNextdotjs size={ICON_SIZE}/>,
+                    "icon": <SiNextdotjs size={ICON_SIZE} />,
                     "title": "Next.js"
                 },
                 {
-                    "icon": <SiReact size={ICON_SIZE}/>,
+                    "icon": <SiReact size={ICON_SIZE} />,
                     "title": "React"
                 },
                 {
-                    "icon": <SiTypescript size={ICON_SIZE}/>,
+                    "icon": <SiTypescript size={ICON_SIZE} />,
                     "title": "TypeScript"
                 },
                 {
-                    "icon": <SiTailwindcss size={ICON_SIZE}/>,
+                    "icon": <SiTailwindcss size={ICON_SIZE} />,
                     "title": "TailwindCSS"
                 },
                 {
-                    "icon": <SiVercel size={ICON_SIZE}/>,
+                    "icon": <SiVercel size={ICON_SIZE} />,
                     "title": "Vercel"
                 },
             ],
