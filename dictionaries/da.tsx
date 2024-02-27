@@ -111,7 +111,7 @@ export default {
         "skillsDescription": "Her er nogle af de færdigheder, jeg har opnået gennem min uddannelse og projekter.",
         "skillsDescription2": "Disse er de erfaringer, jeg har fået gennem projekter på gymnasiet, universitetet og fritidsprojekter.",
         "hello": `Hej, mit navn er `,
-        "about": "Jeg er en 21-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 4. semester.",
+        "about": "Jeg er en 22-årig softwareingeniør. Jeg studerer i øjeblikket Diplomingeniør i Software Teknologi på Syddansk Universitet og er på mit 4. semester.",
         "contacttitle": "Kontakt mig",
         "contact": "Du kan kontakte mig ved at sende en e-mail til ",
         "resume": "Du kan finde mit CV her: ",
