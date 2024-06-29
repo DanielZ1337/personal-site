@@ -74,7 +74,7 @@
     }
 
     ::-webkit-scrollbar {
-        width: 1vw;
+        width: 0.5vw;
     }
 
     ::-webkit-scrollbar-track {
@@ -83,6 +83,7 @@
 
     ::-webkit-scrollbar-thumb {
         background: hsl(var(--border));
+        border-radius: var(--radius);
     }
 
     ::-webkit-scrollbar-thumb:hover {
