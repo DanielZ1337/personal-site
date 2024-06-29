@@ -37,7 +37,7 @@ export function NowPlaying() {
 						isPlaying={data?.is_playing}
 						title={{
 							name: data?.item.name,
-							href: data?.item.href,
+							href: data?.item.external_urls.spotify,
 						}}
 						artist={{
 							name: data?.item.artists[0].name,
