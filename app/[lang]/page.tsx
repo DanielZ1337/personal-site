@@ -16,7 +16,7 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
 	const skills = shuffle(dict.skills)
 
 	return (
-		<div className={'flex-1 flex-col flex text-center mt-16'}>
+		<div className={'flex-1 flex-col flex text-center -mt-16'}>
 			<div className={'h-[100dvh] w-full top-0 left-0 -z-50 bg-background absolute'} />
 			<Welcome dict={dict} />
 			<Skills

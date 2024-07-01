@@ -11,13 +11,39 @@ import { animate, m } from 'framer-motion'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 export function NowPlaying() {
 	const { data, isLoading } = useQuery(spotifyQueryOptions.queries.getCurrentlyPlayingTrack())
 
+	const [open, setOpen] = useState(false)
+	const [isMobile, setIsMobile] = useState(false)
+
+	useEffect(() => {
+		// query
+		const mediaQuery = window.matchMedia('(max-width: 768px)')
+		setIsMobile(mediaQuery.matches)
+		mediaQuery.addEventListener('change', (e) => {
+			setIsMobile(e.matches)
+		})
+
+		return () => {
+			mediaQuery.removeEventListener('change', (e) => {
+				setIsMobile(e.matches)
+			})
+		}
+	}, [])
+
+	const ContentPrimitive = isMobile ? PopoverContent : HoverCardContent
+	const Trigger = isMobile ? PopoverTrigger : HoverCardTrigger
+	const PrimitiveComponent = isMobile ? Popover : HoverCard
+
 	return (
-		<HoverCard>
-			<HoverCardTrigger className='h-10 w-10 rounded-full bg-neutral-200 dark:bg-black flex items-center justify-center'>
+		<PrimitiveComponent
+			open={open}
+			onOpenChange={setOpen}
+		>
+			<Trigger className='h-10 w-10 rounded-full bg-neutral-200 dark:bg-black flex items-center justify-center'>
 				<SiSpotify
 					className={cn(
 						'h-8 w-8 text-primary-foreground m-auto transition-all duration-[900ms]',
@@ -25,8 +51,8 @@ export function NowPlaying() {
 						data?.is_playing && 'text-primary animate-spin'
 					)}
 				/>
-			</HoverCardTrigger>
-			<HoverCardContent className='w-full max-w-lg'>
+			</Trigger>
+			<ContentPrimitive className='w-full max-w-lg'>
 				{isLoading || !data ? (
 					<div className='flex flex-col gap-2'>
 						<Loader2 className='h-7 w-7 text-primary-foreground animate-spin m-auto' />
@@ -48,8 +74,8 @@ export function NowPlaying() {
 						currentTime={data?.progress_ms}
 					/>
 				)}
-			</HoverCardContent>
-		</HoverCard>
+			</ContentPrimitive>
+		</PrimitiveComponent>
 	)
 }
 
