@@ -112,7 +112,7 @@ export default {
         "skillsDescription": "Here are some of the skills I have acquired through my education and projects.",
         "skillsDescription2": "These are the experiences I have gained through projects in high school, university, and personal projects.",
         "hello": "Hello, my name is ",
-        "about": "I am a 22-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am in my 4th semester.",
+        "about": "I am a 22-year-old software engineer. Currently, I am pursuing a Bachelor's degree in Software Technology at the University of Southern Denmark and I am on my 5th semester.",
         "contacttitle": "Contact me",
         "contact": "You can contact me by sending an email to ",
         "resume": "You can find my resume here: ",
