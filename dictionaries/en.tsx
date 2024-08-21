@@ -118,7 +118,7 @@ export default {
         "resume": "You can find my resume here: ",
         "projects": "Projects",
         "projectssubtitle": "Here are some of the projects I have worked on.",
-        "projectsDescription": "I am currently on my 4th semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
+        "projectsDescription": "I am currently on my 5th semester at SDU, where I am studying software engineering. During this time, I have mostly worked with PostgreSQL and Java.",
         "projectsDescription2": "I have been involved in several projects, both individually and collaboratively. I have experience with both frontend and backend development, as well as working with relational and non-relational databases.",
         "projectsDescription3": "Additionally, I have also worked with Next.js and React, with Next.js being my primary experience with React. This work has been done using both JavaScript and TypeScript (best).",
         "projectsDescription4": "I have also worked with C++ and have a good understanding of it. This was in connection with high school, where I took the Higher Technical Examination (HTX) (Mathematics A - Programming B).",
