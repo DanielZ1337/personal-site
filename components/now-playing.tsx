@@ -53,10 +53,14 @@ export function NowPlaying() {
 				/>
 			</Trigger>
 			<ContentPrimitive className='w-full max-w-lg'>
-				{isLoading || !data ? (
+				{isLoading || data === undefined ? (
 					<div className='flex flex-col gap-2'>
 						<Loader2 className='h-7 w-7 text-primary-foreground animate-spin m-auto' />
 						<div className='text-sm text-muted-foreground'>Loading...</div>
+					</div>
+				) : data === null ? (
+					<div className='flex flex-col gap-2'>
+						<div className='text-sm text-muted-foreground'>No song playing</div>
 					</div>
 				) : (
 					<NowPlayingCard
