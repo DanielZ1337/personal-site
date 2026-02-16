@@ -1,25 +1,23 @@
-import {BsArrowRight, BsGithub} from "react-icons/bs";
-import Chip from "@/components/chip";
-import {siteConfig} from "@/lib/site";
-import {getDictionary} from "@/dictionaries/utils/dictionaries";
+import { siteConfig } from '@/lib/site'
+import { getDictionary } from '@/dictionaries/utils/dictionaries'
+import Link from 'next/link'
 
-export default async function Footer({lang}:{ lang: string }) {
-    const dict = await getDictionary(lang)
+export default async function Footer({ lang }: { lang: string }) {
+	const dict = await getDictionary(lang)
 
-    return (
-        <div className={"dark:bg-black w-full flex flex-col sm:flex-row justify-center h-32 items-center gap-4 whitespace-nowrap"}>
-            <p>{dict.footer.creator}</p>
-            <Chip
-                prompt={
-                    <>
-                        {dict.text.visit}
-                        <BsArrowRight/>
-                    </>
-                }
-                link={siteConfig.links.github_repo}
-            >
-                {dict.footer.source} <BsGithub/> Github
-            </Chip>
-        </div>
-    )
+	return (
+		<footer className='border-t border-border py-8 px-6'>
+			<div className='max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground'>
+				<p>&copy; {new Date().getFullYear()} {siteConfig.creator}</p>
+				<Link
+					href={siteConfig.links.github_repo}
+					target='_blank'
+					rel='noopener noreferrer'
+					className='hover:text-primary transition-colors'
+				>
+					{dict.footer.source}
+				</Link>
+			</div>
+		</footer>
+	)
 }

@@ -43,10 +43,10 @@ export function NowPlaying() {
 			open={open}
 			onOpenChange={setOpen}
 		>
-			<Trigger className='h-10 w-10 rounded-full bg-neutral-200 dark:bg-black flex items-center justify-center'>
+			<Trigger className='md:h-10 md:w-10 w-8 h-8 rounded-full bg-neutral-200 dark:bg-black flex items-center justify-center'>
 				<SiSpotify
 					className={cn(
-						'h-8 w-8 text-primary-foreground m-auto transition-all duration-[900ms]',
+						'md:h-8 md:w-8 w-6 h-6 text-primary-foreground m-auto transition-all duration-[900ms]',
 						isLoading && 'animate-spin',
 						data?.is_playing && 'text-primary animate-spin'
 					)}

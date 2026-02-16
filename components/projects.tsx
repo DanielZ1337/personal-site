@@ -1,30 +1,32 @@
-import InViewWrapper from "@/components/in-view-wrapper";
-import ProjectBox from "@/components/project-box";
-import React from "react";
-import {Dictionary} from "@/dictionaries/utils/dictionary-type";
+import type { Dictionary } from '@/dictionaries/utils/dictionary-type'
+import ProjectCard from '@/components/project-card'
+import { projects } from '@/lib/projects'
 
-export default function Projects({dict}: { dict: Dictionary}) {
-    return (
-        <div id={dict.navbar.links[0].projects.id} className={"bg-background min-h-screen relative"}>
-            <div className={"mt-40 max-w-[90vw] lg:max-w-[90vw] mx-auto"}>
-                <h1 className={"text-5xl font-bold mb-10"}>{dict.text.projects}</h1>
-                <h2 className={"text-2xl font-bold mb-10"}>{dict.text.projectssubtitle}</h2>
-                <div
-                    className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4 mb-10 bg-neutral-200 dark:bg-black rounded-xl py-6 px-6 md:px-12 shadow-md"}>
-                    {dict.projects.map((project, index) => (
-                        <InViewWrapper key={project.title}
-                                       initial={{opacity: 0}}
-                                       whenInView={{opacity: 1}}
-                                       whenNotInView={{opacity: 0}}
-                                       transition={{duration: 0.5, delay: index * 0.1}}
-                        >
-                            <ProjectBox title={project.title} description={project.description}
-                                        extraDescription={project.extraDescription}
-                                        image={project.image}
-                                        technologies={project.technologies} links={project.links}/>
-                        </InViewWrapper> ))}
-                </div>
-            </div>
-        </div>
-    )
+export default function Projects({ dict }: { readonly dict: Dictionary }) {
+	return (
+		<section id='projects' className='py-20 px-6'>
+			<div className='max-w-5xl mx-auto'>
+				<h2 className='text-3xl font-bold mb-2'>{dict.projects.heading}</h2>
+				<p className='text-muted-foreground mb-10'>{dict.projects.subtitle}</p>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					{dict.projects.items.map((item) => {
+						const config = projects[item.key]
+						if (!config) return null
+						return (
+							<ProjectCard
+								key={item.key}
+								tag={item.tag}
+								title={item.title}
+								description={item.description}
+								techStack={config.techStack}
+								image={config.image}
+								links={config.links}
+								labels={dict.projects.labels}
+							/>
+						)
+					})}
+				</div>
+			</div>
+		</section>
+	)
 }

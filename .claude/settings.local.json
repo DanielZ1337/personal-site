@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:danielz.dev)"
+      "WebFetch(domain:danielz.dev)",
+      "WebFetch(domain:finance-index-trackers.vercel.app)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
