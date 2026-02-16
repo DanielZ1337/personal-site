@@ -158,6 +158,10 @@ const en: Dictionary = {
 			message: "The page you're looking for doesn't exist. You'll be redirected to the homepage.",
 		},
 	},
+	youtube: {
+		title: 'YouTube',
+		description: 'Here are some of my YouTube videos',
+	},
 }
 
 export default en

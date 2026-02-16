@@ -158,6 +158,10 @@ const da: Dictionary = {
 			message: 'Siden du leder efter findes ikke. Du vil blive omdirigeret til forsiden.',
 		},
 	},
+	youtube: {
+		title: 'YouTube',
+		description: 'Her er nogle af mine YouTube-videoer',
+	},
 }
 
 export default da

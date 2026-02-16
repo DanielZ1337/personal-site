@@ -90,5 +90,9 @@ export interface Dictionary {
 			title: string
 			message: string
 		}
+	},
+	youtube: {
+		title: string
+		description: string
 	}
 }
