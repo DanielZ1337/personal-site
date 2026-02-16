@@ -15,7 +15,7 @@ export default async function Header({ lang }: { lang: string }) {
 		{ href: `/${lang}#projects`, label: dict.nav.projects },
 		{ href: `/${lang}#skills`, label: dict.nav.skills },
 		{ href: `/${lang}#contact`, label: dict.nav.contact },
-		{ href: `/${lang}/youtube`, label: 'YouTube' },
+		// { href: `/${lang}/youtube`, label: 'YouTube' },
 	]
 
 	return (
