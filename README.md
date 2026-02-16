@@ -7,6 +7,7 @@ Welcome to my personal portfolio website! This site showcases my projects, skill
 - **Website:** [https://danielz.dev](https://danielz.dev)
 - **GitHub Repository:** [https://github.com/DanielZ1337/portfolio-site](https://github.com/DanielZ1337/portfolio-site)
 - **License:** MIT
+- **BF/Lover** Mikkel K.
 
 ## Description
 
