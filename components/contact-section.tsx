@@ -43,7 +43,7 @@ export default function ContactSection({ dict }: { readonly dict: Dictionary }) 
 						<Github className='w-5 h-5' />
 						GitHub
 					</Link>
-					<Link
+					{/* <Link
 						href={siteConfig.links.twitter}
 						target='_blank'
 						rel='noopener noreferrer'
@@ -60,7 +60,7 @@ export default function ContactSection({ dict }: { readonly dict: Dictionary }) 
 					>
 						<Youtube className='w-5 h-5' />
 						YouTube
-					</Link>
+					</Link> */}
 				</div>
 			</InViewWrapper>
 		</section>
