@@ -10,11 +10,12 @@ export default async function Header({ lang }: { lang: string }) {
 	const dict = await getDictionary(lang)
 
 	const navLinks = [
-		{ href: '#about', label: dict.nav.about },
-		{ href: '#experience', label: dict.nav.experience },
-		{ href: '#projects', label: dict.nav.projects },
-		{ href: '#skills', label: dict.nav.skills },
-		{ href: '#contact', label: dict.nav.contact },
+		{ href: `/${lang}#about`, label: dict.nav.about },
+		{ href: `/${lang}#experience`, label: dict.nav.experience },
+		{ href: `/${lang}#projects`, label: dict.nav.projects },
+		{ href: `/${lang}#skills`, label: dict.nav.skills },
+		{ href: `/${lang}#contact`, label: dict.nav.contact },
+		{ href: `/${lang}/youtube`, label: 'YouTube' },
 	]
 
 	return (

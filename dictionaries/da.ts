@@ -2,9 +2,9 @@ import type { Dictionary } from '@/dictionaries/utils/dictionary-type'
 
 const da: Dictionary = {
 	meta: {
-		title: 'Daniel Bermann Schmidt — Softwareingenj\u00f8r',
+		title: 'Daniel Bermann Schmidt — Softwareingeni\u00f8r',
 		description:
-			'Backend-fokuseret softwareingenj\u00f8r med produktionserfaring i C#/.NET, TypeScript og Azure. Baseret i Odense, Danmark.',
+			'Backend-fokuseret softwareingeni\u00f8r med produktionserfaring i C#/.NET, TypeScript og Azure. Baseret i Odense, Danmark.',
 	},
 	nav: {
 		about: 'Om',
@@ -25,9 +25,9 @@ const da: Dictionary = {
 		en: 'Engelsk',
 	},
 	hero: {
-		title: 'Softwareingenj\u00f8r',
+		title: 'Softwareingeni\u00f8r',
 		tagline:
-			'Backend-fokuseret ingenj\u00f8r med produktionserfaring i C#/.NET og TypeScript. Jeg bygger systemer der virker\u2009\u2014\u2009fra IoT-overv\u00e5gning og telemetri til multi-tenant enterprise-l\u00f8sninger.',
+			'Backend-fokuseret ingeni\u00f8r med produktionserfaring i C#/.NET og TypeScript. Jeg bygger systemer der virker\u2009\u2014\u2009fra IoT-overv\u00e5gning og telemetri til multi-tenant enterprise-l\u00f8sninger.',
 		location: 'Odense, Danmark',
 		availability: 'Tilg\u00e6ngelig nu',
 		cta: {
@@ -37,7 +37,7 @@ const da: Dictionary = {
 	},
 	about: {
 		heading: 'Om mig',
-		body: 'Nyuddannet softwareingenj\u00f8r med 2 \u00e5rs produktionserfaring fra EFFIMAT, hvor jeg byggede event-drevne overv\u00e5gningsplatforme, arkitekterede Azure-telemetripipelines der behandler ~40.000 datapunkter dagligt, og leverede multi-tenant applikationer med enterprise SSO. Jeg underviste ogs\u00e5 i cloud computing p\u00e5 SDU, hvor jeg guidede 140+ studerende gennem GCP, Docker og Terraform. Jeg trives bedst, n\u00e5r jeg kan tage ejerskab over et problem fra start til slut og shippe noget der g\u00f8r en forskel.',
+		body: 'Nyuddannet softwareingeni\u00f8r med 2 \u00e5rs produktionserfaring fra EFFIMAT, hvor jeg byggede event-drevne overv\u00e5gningsplatforme, arkitekterede Azure-telemetripipelines der behandler ~40.000 datapunkter dagligt, og leverede multi-tenant applikationer med enterprise SSO. Jeg underviste ogs\u00e5 i cloud computing p\u00e5 SDU, hvor jeg guidede 140+ studerende gennem GCP, Docker og Terraform. Jeg trives bedst, n\u00e5r jeg kan tage ejerskab over et problem fra start til slut og shippe noget der g\u00f8r en forskel.',
 	},
 	experience: {
 		heading: 'Erfaring',
@@ -131,7 +131,7 @@ const da: Dictionary = {
 		heading: 'Uddannelse',
 		entries: [
 			{
-				degree: 'Diplomingenj\u00f8r \u2014 Software Teknologi',
+				degree: 'Diplomingeni\u00f8r \u2014 Software Teknologi',
 				school: 'Syddansk Universitet (SDU)',
 				period: '2022 \u2014 2026',
 				location: 'Odense',

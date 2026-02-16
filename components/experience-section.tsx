@@ -1,10 +1,18 @@
 import type { Dictionary } from '@/dictionaries/utils/dictionary-type'
+import SectionHeading from '@/components/section-heading'
+import InViewWrapper from '@/components/in-view-wrapper'
 
 export default function ExperienceSection({ dict }: { readonly dict: Dictionary }) {
 	return (
 		<section id='experience' className='py-20 px-6'>
-			<div className='max-w-3xl mx-auto'>
-				<h2 className='text-3xl font-bold mb-12'>{dict.experience.heading}</h2>
+			<InViewWrapper
+				initial={{ opacity: 0, y: 20 }}
+				whenInView={{ opacity: 1, y: 0 }}
+				whenNotInView={{ opacity: 0, y: 20 }}
+				transition={{ duration: 0.5, ease: 'easeOut' }}
+				className='max-w-3xl mx-auto'
+			>
+				<SectionHeading id='experience' className='text-3xl font-bold mb-12'>{dict.experience.heading}</SectionHeading>
 				<div className='space-y-12'>
 					{dict.experience.roles.map((role) => (
 						<div key={`${role.company}-${role.title}`} className='relative pl-6 border-l-2 border-border'>
@@ -29,7 +37,7 @@ export default function ExperienceSection({ dict }: { readonly dict: Dictionary 
 						</div>
 					))}
 				</div>
-			</div>
+			</InViewWrapper>
 		</section>
 	)
 }

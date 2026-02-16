@@ -14,11 +14,12 @@ export default function MobileNav({ lang }: { readonly lang: string }) {
 	if (!dict) return null
 
 	const navLinks = [
-		{ href: '#about', label: dict.nav.about },
-		{ href: '#experience', label: dict.nav.experience },
-		{ href: '#projects', label: dict.nav.projects },
-		{ href: '#skills', label: dict.nav.skills },
-		{ href: '#contact', label: dict.nav.contact },
+		{ href: `/${lang}#about`, label: dict.nav.about },
+		{ href: `/${lang}#experience`, label: dict.nav.experience },
+		{ href: `/${lang}#projects`, label: dict.nav.projects },
+		{ href: `/${lang}#skills`, label: dict.nav.skills },
+		{ href: `/${lang}#contact`, label: dict.nav.contact },
+		{ href: `/${lang}/youtube`, label: 'YouTube' },
 		{ href: '/cv.pdf', label: dict.nav.cv, external: true },
 	]
 

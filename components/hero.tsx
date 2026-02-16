@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Dictionary } from '@/dictionaries/utils/dictionary-type'
 import { MapPin } from 'lucide-react'
 import InViewWrapper from './in-view-wrapper'
+import SlideUp from './slide-up'
 import logo from '@/public/logo_old.svg'
 import { NowPlaying } from './now-playing'
 
@@ -42,33 +43,41 @@ export default function Hero({ dict }: { readonly dict: Dictionary }) {
 					</div>
 				</InViewWrapper>
 			</div>
-			<h1 className='text-4xl md:text-5xl font-bold tracking-tight'>{siteConfig.creator}</h1>
-			<p className='text-xl md:text-2xl text-muted-foreground mt-2'>{dict.hero.title}</p>
-			<p className='max-w-2xl text-lg text-muted-foreground mt-6 text-balance leading-relaxed'>{dict.hero.tagline}</p>
-			<div className='flex items-center gap-4 mt-6 text-sm text-muted-foreground'>
-				<span className='flex items-center gap-1.5'>
-					<MapPin className='w-4 h-4' />
-					{dict.hero.location}
-				</span>
-				<span className='w-1.5 h-1.5 rounded-full bg-green-500' />
-				<span className='text-green-600 dark:text-green-400 font-medium'>{dict.hero.availability}</span>
-			</div>
-			<div className='flex items-center gap-4 mt-8'>
-				<Link
-					href='/cv.pdf'
-					target='_blank'
-					rel='noopener noreferrer'
-					className='inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors'
-				>
-					{dict.hero.cta.cv}
-				</Link>
-				<Link
-					href='#contact'
-					className='inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:bg-accent transition-colors'
-				>
-					{dict.hero.cta.contact}
-				</Link>
-			</div>
+			<SlideUp delay={0.1}>
+				<h1 className='text-4xl md:text-5xl font-bold tracking-tight'>{siteConfig.creator}</h1>
+				<p className='text-xl md:text-2xl text-muted-foreground mt-2'>{dict.hero.title}</p>
+			</SlideUp>
+			<SlideUp delay={0.2}>
+				<p className='max-w-2xl text-lg text-muted-foreground mt-6 text-balance leading-relaxed'>{dict.hero.tagline}</p>
+			</SlideUp>
+			<SlideUp delay={0.3}>
+				<div className='flex items-center gap-4 mt-6 text-sm text-muted-foreground'>
+					<span className='flex items-center gap-1.5'>
+						<MapPin className='w-4 h-4' />
+						{dict.hero.location}
+					</span>
+					<span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+					<span className='text-green-600 dark:text-green-400 font-medium'>{dict.hero.availability}</span>
+				</div>
+			</SlideUp>
+			<SlideUp delay={0.4}>
+				<div className='flex items-center gap-4 mt-8'>
+					<Link
+						href='/cv.pdf'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors'
+					>
+						{dict.hero.cta.cv}
+					</Link>
+					<Link
+						href='#contact'
+						className='inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:bg-accent transition-colors'
+					>
+						{dict.hero.cta.contact}
+					</Link>
+				</div>
+			</SlideUp>
 		</section>
 	)
 }

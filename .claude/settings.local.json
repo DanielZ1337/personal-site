@@ -3,7 +3,9 @@
     "allow": [
       "WebFetch(domain:danielz.dev)",
       "WebFetch(domain:finance-index-trackers.vercel.app)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(npx next build:*)",
+      "Bash(SPOTIFY_CLIENT_ID=dummy SPOTIFY_REFRESH_TOKEN=dummy npx next build:*)"
     ]
   }
 }
