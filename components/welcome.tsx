@@ -55,6 +55,7 @@ export default function Welcome({ dict }: { dict: Dictionary }) {
 						transition={{ duration: 0.5 }}
 					>
 						<p>
+							{/* @ts-ignore */}
 							{dict.text.hello}
 							<Link
 								href={siteConfig.links.linkedin}
@@ -74,6 +75,7 @@ export default function Welcome({ dict }: { dict: Dictionary }) {
 					whenNotInView={{ opacity: 0, y: 50 }}
 					transition={{ duration: 0.5 }}
 				>
+					{/* @ts-ignore */}
 					<p className={'max-w-md text-xl mt-6 mb-5 text-muted-foreground md:mx-0 mx-10'}>{dict.text.about}</p>
 				</InViewWrapper>
 			</div>

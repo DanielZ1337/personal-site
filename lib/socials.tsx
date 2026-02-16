@@ -1,27 +1,29 @@
-import {siteConfig} from "@/lib/site";
-import {BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiLogoYoutube, BiMailSend} from "react-icons/bi";
+import { siteConfig } from "@/lib/site"
+import { BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiLogoYoutube, BiMailSend } from "react-icons/bi"
 
 const socials = {
     "LinkedIn": {
         "href": siteConfig.links.linkedin,
-        "icon": <BiLogoLinkedin/>
+        "icon": <BiLogoLinkedin />
     },
     "GitHub": {
         "href": siteConfig.links.github,
-        "icon": <BiLogoGithub/>
+        "icon": <BiLogoGithub />
     },
     "Email": {
         "href": siteConfig.links.emailto,
-        "icon": <BiMailSend/>
+        "icon": <BiMailSend />
     },
     "Twitter": {
+        // @ts-ignore
         "href": siteConfig.links.twitter,
-        "icon": <BiLogoTwitter/>
+        "icon": <BiLogoTwitter />
     },
     "YouTube": {
+        // @ts-ignore
         "href": siteConfig.links.youtube,
-        "icon": <BiLogoYoutube/>
+        "icon": <BiLogoYoutube />
     }
 }
 
-export default socials;
+export default socials

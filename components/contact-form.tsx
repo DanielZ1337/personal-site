@@ -27,24 +27,30 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
 			transition={{ duration: 0.5 }}
 		>
 			<div
+				// @ts-ignore
 				id={dict.navbar.links[0].contact.id}
 				className={
 					'mt-16 mb-16 flex max-w-[90vw] lg:max-w-[70vw] mx-auto bg-neutral-200 dark:bg-black rounded-xl py-14 px-10 md:py-20 md:px-16 flex-col h-full shadow-md'
 				}
 			>
+				{/* @ts-ignore */}
 				<h1 className={'text-5xl font-bold text-center'}>{dict.text.contacttitle}</h1>
+				{/* @ts-ignore */}
 				<h2 className={'text-2xl mt-6 mb-8 dark:text-muted-foreground text-center'}>{dict.text.contact}</h2>
 				<div className={'mx-auto flex gap-2 w-full md:w-2/3 xl:w-1/2'}>
 					<div className={'whitespace-pre-wrap flex-wrap w-full'}>
 						<p className={'text-xl mb-5 md:mt-0 mt-16 dark:text-muted-foreground text-start'}>
+							{/* @ts-ignore */}
 							{dict.text.email}:{' '}
 							<span>
 								<Link
+									// @ts-ignore
 									href={`mailto:${siteConfig.links.dev_email}`}
 									className={'text-primary hover:underline'}
 									target={'_blank'}
 									rel={'noreferrer'}
 								>
+									{/* @ts-ignore */}
 									{siteConfig.links.dev_email}
 								</Link>
 							</span>

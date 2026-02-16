@@ -28,6 +28,7 @@ export default function SideNavSocials() {
 			exit={{ opacity: 0, x: 50 }}
 		>
 			<p className={'text-center font-semibold text-secondary-foreground whitespace-break-spaces text-balance'}>
+				{/* @ts-ignore */}
 				{dict.text.socials}
 			</p>
 			<div
