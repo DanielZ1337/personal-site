@@ -24,7 +24,7 @@ export default async function Header({ lang }: { lang: string }) {
 				style={{ width: 'min(calc(100vw - 20px), 600px + 40vw)' }}
 			>
 				<Link href={`/${lang}`} className='z-10'>
-					<Image src={logo} alt='Logo' className='w-8 h-8' />
+					<Image src={logo} alt='Logo' className='w-8 h-8 text-foreground transition-colors' />
 				</Link>
 				<nav className='flex items-center gap-1 absolute left-0 w-full justify-center'>
 					{navLinks.map(({ href, label }) => (
