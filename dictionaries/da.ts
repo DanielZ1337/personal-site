@@ -52,7 +52,7 @@ const da: Dictionary = {
 				companyUrl: 'https://netcompany.com/',
 				logoSrc: '/images/experience/netcompany.png',
 				logoInitials: 'NC',
-				companyMeta: ['R\u00e5dgivning', 'Enterprise-software'],
+				companyMeta: ['Consulting', 'Enterprise software'],
 				techStack: ['Full-stack', 'Backend', 'Cloud', 'Enterprise-apps'],
 				bullets: [
 					'Starter hos Netcompany som Associate Consultant med arbejde p\u00e5 klientvendte softwarel\u00f8sninger inden for analyse, implementering og enterprise-systemer.',
@@ -86,7 +86,7 @@ const da: Dictionary = {
 				companyUrl: 'https://www.sdu.dk/da/',
 				logoSrc: '/images/experience/sdu.png',
 				logoInitials: 'SDU',
-				companyMeta: ['Undervisning', 'Cloud Computing'],
+				companyMeta: ['Teaching', 'Cloud Computing'],
 				techStack: ['GCP', 'Docker', 'Terraform', 'Cloud-arkitektur'],
 				bullets: [
 					'Guidede 140+ studerende gennem cloud-arkitektur: Google Cloud Platform (GCP), Docker, Terraform og infrastructure-as-code-m\u00f8nstre.',
