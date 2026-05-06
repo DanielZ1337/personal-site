@@ -43,6 +43,16 @@ const en: Dictionary = {
 		heading: 'Experience',
 		roles: [
 			{
+				company: 'Netcompany',
+				title: 'Associate Consultant',
+				period: 'Jun 2026 \u2014 Present',
+				location: 'Copenhagen, Denmark',
+				bullets: [
+					'Associate Consultant at Netcompany, working on client-facing software solutions across requirements, architecture, implementation, and delivery.',
+					'Focus areas include full-stack development, backend systems, cloud infrastructure, and scalable enterprise applications.',
+				],
+			},
+			{
 				company: 'EFFIMAT',
 				title: 'Student Software Engineer / Intern',
 				period: 'Nov 2023 \u2014 Jan 2026',

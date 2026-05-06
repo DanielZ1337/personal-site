@@ -11,11 +11,8 @@ import MobileNav from '@/components/mobile-nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export function getStaticPaths() {
-	return {
-		paths: siteConfig.langs.map((lang) => ({ params: { lang } })),
-		fallback: false,
-	}
+export function generateStaticParams() {
+	return siteConfig.langs.map((lang) => ({ lang }))
 }
 
 if (process.env.NODE_ENV === 'development') {
