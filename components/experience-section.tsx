@@ -1,9 +1,9 @@
 import type { Dictionary } from '@/dictionaries/utils/dictionary-type'
 import SectionHeading from '@/components/section-heading'
 import InViewWrapper from '@/components/in-view-wrapper'
+import CompanyLogo from '@/components/company-logo'
 import { getLogoAccentColor } from '@/lib/logo-accent'
 import { CalendarDays, ExternalLink, MapPin } from 'lucide-react'
-import Image from 'next/image'
 import type { CSSProperties } from 'react'
 
 function getInitials(company: string) {
@@ -31,37 +31,34 @@ export default function ExperienceSection({ dict }: { readonly dict: Dictionary 
 				className='max-w-3xl mx-auto'
 			>
 				<SectionHeading id='experience' className='text-3xl font-bold mb-12'>{dict.experience.heading}</SectionHeading>
-				<div className='relative space-y-10 before:absolute before:left-5 before:top-3 before:h-[calc(100%-1.5rem)] before:w-px before:bg-border sm:before:left-6'>
+				<div className='relative space-y-10 before:absolute before:left-[19px] before:top-3 before:h-[calc(100%-1.5rem)] before:w-px before:bg-border/40 sm:before:left-6'>
 					{dict.experience.roles.map((role) => {
 						const accentColor = getAccentColor(role)
 						const initials = role.logoInitials ?? getInitials(role.company)
 						const accentStyle = { '--experience-accent': accentColor } as CSSProperties
+						const hasMeta = role.companyMeta && role.companyMeta.length > 0
+						const isUpcoming = Boolean(role.status)
 
 						return (
-							<article key={`${role.company}-${role.title}`} className='group/role relative pl-14 sm:pl-20' style={accentStyle}>
-								<div
-									className='absolute left-[13px] top-8 z-10 h-4 w-4 rounded-full bg-[var(--experience-accent)] ring-8 ring-[color:var(--experience-accent)]/15 transition-transform duration-300 group-hover/role:scale-110 sm:left-[17px]'
-								/>
+							<article key={`${role.company}-${role.title}`} className='group/role relative pl-10 sm:pl-20' style={accentStyle}>
+								<div className='absolute left-[14px] top-8 z-10 h-3 w-3 sm:left-[18px]' aria-hidden='true'>
+									{isUpcoming && (
+										<span className='absolute inset-0 rounded-full bg-[var(--experience-accent)] opacity-40 animate-[ping_2.4s_cubic-bezier(0,0,0.2,1)_infinite] motion-reduce:[animation:none]' />
+									)}
+									<span className='relative block h-3 w-3 rounded-full bg-[var(--experience-accent)] ring-[6px] ring-[color-mix(in_oklab,var(--experience-accent)_15%,transparent)] transition-transform duration-300 group-hover/role:scale-110' />
+								</div>
 								<div
 									className='relative overflow-hidden rounded-xl border border-border bg-card/90 shadow-sm transition-all duration-300 before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-1 before:bg-[var(--experience-accent)] hover:-translate-y-0.5 hover:border-[color-mix(in_oklab,var(--experience-accent)_30%,transparent)] hover:shadow-md dark:bg-card/70'
 								>
-									<div className='bg-[linear-gradient(90deg,color-mix(in_srgb,var(--experience-accent)_14%,transparent),transparent)] px-6 pb-5 pt-6'>
+									<div className='bg-[linear-gradient(90deg,color-mix(in_srgb,var(--experience-accent)_14%,transparent),transparent)] px-5 pb-5 pt-6 sm:px-6'>
 										<div className='flex items-start gap-3 sm:gap-4'>
 											<div className='flex w-[4.25rem] shrink-0 items-start justify-center pt-0.5 sm:w-20' aria-hidden='true'>
-												{role.logoSrc ? (
-													<Image
-														src={role.logoSrc}
-														alt=''
-														width={80}
-														height={56}
-														className='h-auto max-h-14 w-auto max-w-full object-contain'
-														sizes='80px'
-													/>
-												) : (
-													<div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-sm'>
-														{initials}
-													</div>
-												)}
+												<CompanyLogo
+													src={role.logoSrc}
+													alt=''
+													initials={initials}
+													fallbackColor={accentColor}
+												/>
 											</div>
 											<h3 className='min-w-0 flex-1 pt-1 text-xl font-semibold leading-tight'>
 												{role.companyUrl ? (
@@ -70,10 +67,10 @@ export default function ExperienceSection({ dict }: { readonly dict: Dictionary 
 														target='_blank'
 														rel='noopener noreferrer'
 														aria-label={`${role.company} website`}
-														className='rounded transition-colors group hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+														className='group/link rounded transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
 													>
 														{role.company}
-														<span className='ml-1.5 inline-flex align-middle group-hover:text-primary text-muted-foreground'>
+														<span className='ml-2.5 inline-flex align-baseline text-muted-foreground transition-colors group-hover/link:text-primary group-focus-visible/link:text-primary'>
 															<ExternalLink className='h-3.5 w-3.5' aria-hidden='true' />
 														</span>
 													</a>
@@ -82,7 +79,7 @@ export default function ExperienceSection({ dict }: { readonly dict: Dictionary 
 												)}
 											</h3>
 											{role.status && (
-												<span className='shrink-0 rounded-full border px-3 py-1 text-xs font-medium text-[var(--experience-accent)] [background:color-mix(in_srgb,var(--experience-accent)_10%,transparent)] [border-color:color-mix(in_srgb,var(--experience-accent)_28%,transparent)]'>
+												<span className='shrink-0 rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-foreground'>
 													{role.status}
 												</span>
 											)}
@@ -99,13 +96,18 @@ export default function ExperienceSection({ dict }: { readonly dict: Dictionary 
 													{role.location}
 												</span>
 											</div>
+											{hasMeta && (
+												<p className='mt-1.5 text-xs text-muted-foreground/80'>
+													{role.companyMeta!.join(' · ')}
+												</p>
+											)}
 										</div>
 									</div>
 
-									<div className='space-y-5 px-6 pb-6 pt-5'>
+									<div className='space-y-5 px-5 pb-6 pt-5 sm:px-6'>
 										<ul className='space-y-3 sm:pl-24'>
 											{role.bullets.map((bullet) => (
-												<li key={bullet} className='flex gap-3 text-sm leading-relaxed text-muted-foreground'>
+												<li key={bullet} className='flex gap-3 text-sm leading-relaxed text-foreground/75'>
 													<span className='mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--experience-accent)]' />
 													<span>{bullet}</span>
 												</li>

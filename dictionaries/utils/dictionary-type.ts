@@ -47,6 +47,7 @@ export interface Dictionary {
 			companyUrl?: string
 			logoSrc?: string
 			logoInitials?: string
+			companyMeta?: string[]
 			techStack?: string[]
 			bullets: string[]
 		}[]
