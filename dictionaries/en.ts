@@ -28,7 +28,7 @@ const en: Dictionary = {
 		title: 'Software Engineer',
 		tagline:
 			'Backend-focused engineer with production experience in C#/.NET and TypeScript. I build systems that work\u2009—\u2009from IoT telemetry pipelines to multi-tenant enterprise apps.',
-		location: 'Odense, Denmark',
+		location: 'Slagelse, Denmark',
 		availability: 'Available immediately',
 		cta: {
 			cv: 'Download CV',
@@ -43,20 +43,30 @@ const en: Dictionary = {
 		heading: 'Experience',
 		roles: [
 			{
+				key: 'netcompany',
 				company: 'Netcompany',
 				title: 'Associate Consultant',
-				period: 'Jun 2026 \u2014 Present',
+				period: 'Jun 2026 - Present',
 				location: 'Copenhagen, Denmark',
+				companyUrl: 'https://netcompany.com/',
+				logoSrc: '/images/experience/netcompany.png',
+				logoInitials: 'N',
+				techStack: ['Full-stack', 'Backend', 'Cloud', 'Enterprise apps'],
 				bullets: [
-					'Associate Consultant at Netcompany, working on client-facing software solutions across requirements, architecture, implementation, and delivery.',
+					'Joining Netcompany as an Associate Consultant, working on client-facing software solutions across requirements, architecture, implementation, and delivery.',
 					'Focus areas include full-stack development, backend systems, cloud infrastructure, and scalable enterprise applications.',
 				],
 			},
 			{
+				key: 'effimat',
 				company: 'EFFIMAT',
 				title: 'Student Software Engineer / Intern',
 				period: 'Nov 2023 \u2014 Jan 2026',
 				location: 'Odense',
+				companyUrl: 'https://www.effimat.com/',
+				logoSrc: '/images/experience/effimat.svg',
+				logoInitials: 'E',
+				techStack: ['C#/.NET', 'Azure', 'IoT', 'React', 'PostgreSQL'],
 				bullets: [
 					'Built event-driven IoT monitoring platform in C#/.NET that replaced manual Excel tracking, enabling the service department to manage 140+ incidents with status history, automated notifications, and PDF report generation.',
 					'Architected telemetry pipeline via Azure IoT Hub and Functions, processing ~40K data points daily with zero unplanned downtime since launch.',
@@ -65,10 +75,15 @@ const en: Dictionary = {
 				],
 			},
 			{
+				key: 'sdu',
 				company: 'University of Southern Denmark',
 				title: 'Teaching Assistant \u2014 Cloud Computing',
 				period: 'Aug 2025 \u2014 Jan 2026',
 				location: 'Odense & S\u00f8nderborg',
+				companyUrl: 'https://www.sdu.dk/en/',
+				logoSrc: '/images/experience/sdu.png',
+				logoInitials: 'SDU',
+				techStack: ['GCP', 'Docker', 'Terraform', 'Cloud architecture'],
 				bullets: [
 					'Guided 140+ students through cloud architecture: Google Cloud Platform (GCP), Docker, Terraform, and infrastructure-as-code patterns.',
 					'Created and graded hands-on exercises covering containerization, cloud deployment with Terraform, service orchestration on GCP, and cloud-native application design.',

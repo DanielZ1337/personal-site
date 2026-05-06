@@ -38,10 +38,16 @@ export interface Dictionary {
 	experience: {
 		heading: string
 		roles: {
+			key: string
 			company: string
 			title: string
 			period: string
+			status?: string
 			location: string
+			companyUrl?: string
+			logoSrc?: string
+			logoInitials?: string
+			techStack?: string[]
 			bullets: string[]
 		}[]
 	}

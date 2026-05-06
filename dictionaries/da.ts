@@ -28,7 +28,7 @@ const da: Dictionary = {
 		title: 'Softwareingeni\u00f8r',
 		tagline:
 			'Backend-fokuseret ingeni\u00f8r med produktionserfaring i C#/.NET og TypeScript. Jeg bygger systemer der virker\u2009\u2014\u2009fra IoT-overv\u00e5gning og telemetri til multi-tenant enterprise-l\u00f8sninger.',
-		location: 'Odense, Danmark',
+		location: 'Slagelse, Danmark',
 		availability: 'Tilg\u00e6ngelig nu',
 		cta: {
 			cv: 'Download CV',
@@ -43,20 +43,30 @@ const da: Dictionary = {
 		heading: 'Erfaring',
 		roles: [
 			{
+				key: 'netcompany',
 				company: 'Netcompany',
 				title: 'Associate Consultant',
-				period: 'Jun 2026 \u2014 Nu',
+				period: 'Jun 2026 - Nu',
 				location: 'K\u00f8benhavn, Danmark',
+				companyUrl: 'https://netcompany.com/',
+				logoSrc: '/images/experience/netcompany.png',
+				logoInitials: 'N',
+				techStack: ['Full-stack', 'Backend', 'Cloud', 'Enterprise-apps'],
 				bullets: [
-					'Associate Consultant hos Netcompany med arbejde p\u00e5 klientvendte softwarel\u00f8sninger inden for krav, arkitektur, implementering og levering.',
+					'Starter hos Netcompany som Associate Consultant med arbejde p\u00e5 klientvendte softwarel\u00f8sninger inden for krav, arkitektur, implementering og levering.',
 					'Fokusomr\u00e5der inkluderer full-stack udvikling, backend-systemer, cloud-infrastruktur og skalerbare enterprise-applikationer.',
 				],
 			},
 			{
+				key: 'effimat',
 				company: 'EFFIMAT',
 				title: 'Studentermedarbejder / Praktikant \u2014 Softwareudvikling',
 				period: 'Nov 2023 \u2014 Jan 2026',
 				location: 'Odense',
+				companyUrl: 'https://www.effimat.com/',
+				logoSrc: '/images/experience/effimat.svg',
+				logoInitials: 'EM',
+				techStack: ['C#/.NET', 'Azure', 'IoT', 'React', 'PostgreSQL'],
 				bullets: [
 					'Byggede event-drevet IoT-overv\u00e5gningsplatform i C#/.NET, der erstattede manuel Excel-sporing og gav serviceafdelingen mulighed for at h\u00e5ndtere 140+ h\u00e6ndelser med statushistorik, automatiske notifikationer og PDF-rapportgenerering.',
 					'Arkitekterede telemetripipeline via Azure IoT Hub og Functions, der behandler ~40.000 datapunkter dagligt uden uplanlagt nedetid siden lancering.',
@@ -65,10 +75,15 @@ const da: Dictionary = {
 				],
 			},
 			{
+				key: 'sdu',
 				company: 'Syddansk Universitet',
 				title: 'Undervisningsassistent \u2014 Cloud Computing',
 				period: 'Aug 2025 \u2014 Jan 2026',
 				location: 'Odense & S\u00f8nderborg',
+				companyUrl: 'https://www.sdu.dk/da/',
+				logoSrc: '/images/experience/sdu.png',
+				logoInitials: 'SDU',
+				techStack: ['GCP', 'Docker', 'Terraform', 'Cloud-arkitektur'],
 				bullets: [
 					'Guidede 140+ studerende gennem cloud-arkitektur: Google Cloud Platform (GCP), Docker, Terraform og infrastructure-as-code-m\u00f8nstre.',
 					'Udarbejdede og bed\u00f8mte praktiske \u00f8velser i containerisering, cloud-deployment med Terraform, serviceorkestrering p\u00e5 GCP og cloud-native applikationsdesign.',
